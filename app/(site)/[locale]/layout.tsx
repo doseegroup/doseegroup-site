@@ -11,12 +11,13 @@ export function generateStaticParams() {
   return [{ locale: "ja" }, { locale: "en" }];
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
-}): Metadata {
-  const locale = isLocale(params.locale) ? (params.locale as Locale) : "ja";
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
   const dict = getDictionary(locale);
 
   return {
@@ -45,14 +46,15 @@ export function generateMetadata({
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = isLocale(params.locale) ? (params.locale as Locale) : "ja";
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
   const dict = getDictionary(locale);
 
   return (

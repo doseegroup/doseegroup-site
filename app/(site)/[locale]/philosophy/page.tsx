@@ -33,7 +33,7 @@ export default async function PhilosophyPage({
         <div className="mt-12">
           <Image
             src="/images/philosophy/dosee-cycle.svg"
-            alt={dict.philosophy.images?.cycleAlt ?? "The DoSee Cycle diagram"}
+            alt={dict.images.cycleAlt ?? "The DoSee Cycle diagram"}
             width={1600}
             height={900}
             priority
@@ -76,10 +76,7 @@ export default async function PhilosophyPage({
         <div className="mt-12">
           <Image
             src="/images/philosophy/dosee-practice.svg"
-            alt={
-              dict.philosophy.images?.practiceAlt ??
-              "DoSee Philosophy in Practice diagram"
-            }
+            alt={dict.images.practiceAlt ?? "Practice diagram"}
             width={1600}
             height={900}
           />

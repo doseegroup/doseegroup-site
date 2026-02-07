@@ -29,13 +29,7 @@ export default async function HomePage({
         ctaLabel={dict.sections.aboutCta}
       />
 
-      <HomeBusiness
-        locale={locale}
-        title={dict.sections.businessTitle}
-        wellnessName={dict.business.wellnessName}
-        wellnessDesc={dict.business.wellnessDesc}
-        wellnessCta={dict.business.wellnessCta}
-      />
+      <HomeBusiness locale={locale} />
 
       <HomeCTA
         locale={locale}
