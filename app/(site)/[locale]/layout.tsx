@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/getDictionary";
 import { siteConfig } from "@/lib/siteConfig";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/seo/JsonLd"; // ✅ 追加
 
 export const dynamicParams = false;
 
@@ -59,6 +60,9 @@ export default async function LocaleLayout({
 
   return (
     <div className="min-h-dvh flex flex-col">
+      {/* ✅ JSON-LD は1回出せばOK */}
+      <JsonLd locale={locale} />
+
       <Navigation locale={locale} dict={dict} />
       <main className="flex-1">{children}</main>
       <Footer locale={locale} />
