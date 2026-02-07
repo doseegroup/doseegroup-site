@@ -23,7 +23,7 @@ export default function JsonLd({ locale }: Props) {
     name: "DoSee Group",
     legalName: "株式会社DoSee Group",
     url: urlBase,
-    logo: `${urlBase}/favicon.ico`, // ロゴ画像があるなら差し替え推奨（例: /images/logo.png）
+    logo: `${urlBase}/images/logo.png`, 
     image: siteConfig.ogImage?.startsWith("http") ? siteConfig.ogImage : `${urlBase}${siteConfig.ogImage}`,
     address: {
       "@type": "PostalAddress",
