@@ -5,12 +5,13 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/siteConfig";
 
-export default function WellnessBusinessPage({
+export default async function WellnessBusinessPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = isLocale(params.locale) ? (params.locale as Locale) : "ja";
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
   const dict = getDictionary(locale);
 
   const body =

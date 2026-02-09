@@ -4,7 +4,10 @@ import { getDictionary } from "@/lib/getDictionary";
 import { siteConfig } from "@/lib/siteConfig";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
-import JsonLd from "@/components/seo/JsonLd"; // ✅ 追加
+import JsonLd from "@/components/seo/JsonLd";
+
+// ✅ 追加（Particles）
+import ParticlesCanvas from "@/components/effects/ParticlesCanvas";
 
 export const dynamicParams = false;
 
@@ -59,13 +62,19 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale);
 
   return (
-    <div className="min-h-dvh flex flex-col">
+    <div className="relative min-h-dvh">
       {/* ✅ JSON-LD は1回出せばOK */}
       <JsonLd locale={locale} />
 
-      <Navigation locale={locale} dict={dict} />
-      <main className="flex-1">{children}</main>
-      <Footer locale={locale} />
+      {/* ✅ 背景（全ページ共通） */}
+      <ParticlesCanvas />
+
+      {/* ✅ 前面コンテンツ */}
+      <div className="relative z-10 min-h-dvh flex flex-col">
+        <Navigation locale={locale} dict={dict} />
+        <main className="flex-1">{children}</main>
+        <Footer locale={locale} />
+      </div>
     </div>
   );
 }
