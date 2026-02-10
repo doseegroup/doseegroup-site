@@ -9,6 +9,7 @@ export default function Button({
   href: string;
   children: React.ReactNode;
   variant?: "solid" | "outline" | "text";
+  className?: string;
   external?: boolean;
 }) {
   const base =

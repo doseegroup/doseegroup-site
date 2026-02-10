@@ -44,6 +44,51 @@ export const en = {
   
     comingSoon:
       "Additional business areas will be launched in the future.",
+    globalGrowthLP: {
+      hero: {
+        eyebrow: "Japan × Global",
+        title: "Build inbound growth with a system — not guesswork.",
+        sub: "Inbound-focused social media operations, DM handling, and conversion design.\nNo shooting required / JP–EN support / From ¥50,000 per month",
+        ctaPrimary: "Book a free consult",
+        ctaSecondary: "View the service",
+      },
+      who: {
+        title: "Who it’s for / What it is",
+        lead:
+          "For restaurants and venues serving international travelers, we design and operate social media that converts interest into real visits.",
+        bullets: [
+          "For: restaurants/venues that want more international guests",
+          "What: SNS operations / DM handling / conversion pathway design",
+        ],
+      },
+      pains: {
+        title: "Common pain points",
+        items: [
+          "Not sure where to start for international-facing content",
+          "Missing inquiries because you can’t respond in English",
+          "Posting has stalled — or results are unclear",
+          "Inbound efforts feel reactive and inconsistent",
+        ],
+      },
+      solution: {
+        title: "Global Growth fixes it",
+        bullets: [
+          "Inbound SNS strategy + ongoing operations",
+          "Bilingual (JP/EN) posts and captions",
+          "DM and inquiry handling support",
+          "Conversion pathway cleanup and improvement",
+        ],
+        note: "Placeholder copy — we’ll refine this later.",
+      },
+      consult: {
+        title: "Free Consult (30 min)",
+        lead:
+          "We’ll simply organize your current situation and confirm direction — no sales pressure.",
+        assures: ["No hard sell", "Consult-only is fine", "No shooting / no prep needed"],
+        cta: "Book a free consult",
+        footnote: "We only discuss pricing/contract if needed.",
+      },
+    },
   },
    company: {
     title: "Company Information",
