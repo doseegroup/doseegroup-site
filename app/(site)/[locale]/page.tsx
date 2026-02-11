@@ -30,13 +30,6 @@ export default async function HomePage({
       />
 
       <HomeBusiness locale={locale} />
-
-      <HomeCTA
-        locale={locale}
-        title={dict.sections.ctaTitle}
-        body={dict.sections.ctaBody}
-        buttonText={dict.sections.ctaButton}
-      />
     </>
   );
 }
