@@ -13,6 +13,11 @@ type Plan = {
   note?: string;
   highlighted?: boolean;
   ctaLabel: string;
+
+  // ✅ 追加：プラン別に表示したい内容
+  includesNote?: string; // Standard/Premium だけ
+  highlights: string[]; // 箇条書き
+  recommendedFor: string; // 「こんな店舗におすすめ」
 };
 
 type FeatureRow = {
@@ -35,25 +40,58 @@ const plans: Plan[] = [
     name: "Basic",
     tagline: "まず最低限、外国人対応を整える",
     price: "¥50,000",
-    note: "/ 月",
+    note: "/ 月〜",
     ctaLabel: "無料相談で確認する",
+    highlights: [
+      "定型英語DM対応（営業時間・アクセス・予約方法など）",
+      "メニュー／価格帯の基本案内",
+      "月8投稿（週2）｜フィード中心",
+      "簡易リール（月2まで）",
+      "ストーリー週3（テンプレ運用）",
+      "日英キャプション（短く・誤解しない表現）",
+      "月1レポート（反応＋改善点）",
+    ],
+    recommendedFor: "初めて外注する／まず最低限整えたい小規模店",
   },
   {
     key: "standard",
     name: "Standard",
     tagline: "来店につなげる、実務レベルの運用",
     price: "¥80,000",
-    note: "/ 月",
+    note: "/ 月〜",
     highlighted: true,
     ctaLabel: "無料相談を予約する",
+    includesNote: "※ Basic の全内容を含みます",
+    highlights: [
+      "英語DM：自然文対応",
+      "予約前の案内・来店誘導",
+      "観光客向け利用説明（決済・マナー）",
+      "月12投稿（週3）｜リール月4まで",
+      "ストーリー週5（導線強化）",
+      "英語キャプション最適化",
+      "月1回MTG（30分）",
+    ],
+    recommendedFor: "観光エリア／費用対効果を重視したい店舗",
   },
   {
     key: "premium",
     name: "Premium",
     tagline: "DMを、集客と改善に使う",
     price: "¥120,000",
-    note: "/ 月",
+    note: "/ 月〜",
     ctaLabel: "無料相談で確認する",
+    includesNote: "※ Standard の全内容を含みます",
+    highlights: [
+      "食事制限・宗教配慮の詳細説明",
+      "誤解が起きやすい点の事前補足",
+      "クレーム一次受付（切り分けのみ）",
+      "DM内容の傾向分析・改善提案",
+      "優先返信・繁忙期対応（上限あり）",
+      "月16投稿（週4）｜リール月5まで",
+      "ストーリー毎日（イベント対応含む）",
+    ],
+    recommendedFor:
+      "高単価／ブランド重視／外国人対応で失敗したくない店舗",
   },
 ];
 
@@ -203,7 +241,9 @@ function PlanCard({ plan }: { plan: Plan }) {
     <div
       className={[
         "relative rounded-3xl bg-white p-8 flex flex-col",
-        plan.highlighted ? "border-2 border-stone-900" : "border border-stone-200",
+        plan.highlighted
+          ? "border-2 border-stone-900"
+          : "border border-stone-200",
       ].join(" ")}
     >
       {plan.highlighted && (
@@ -217,8 +257,33 @@ function PlanCard({ plan }: { plan: Plan }) {
 
       <p className="mt-6 text-3xl font-semibold text-stone-900">
         {plan.price}
-        <span className="text-sm font-normal text-stone-500"> {plan.note}</span>
+        {plan.note && (
+          <span className="text-sm font-normal text-stone-500"> {plan.note}</span>
+        )}
       </p>
+
+      {/* ✅ Standard/Premium のみ表示 */}
+      {plan.includesNote && (
+        <p className="mt-3 text-xs text-stone-500">{plan.includesNote}</p>
+      )}
+
+      {/* ✅ プラン別：箇条書き */}
+      <ul className="mt-6 space-y-2 text-sm text-stone-700">
+        {plan.highlights.map((t) => (
+          <li key={t} className="flex gap-2">
+            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-stone-900" />
+            <span className="leading-relaxed">{t}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* ✅ プラン別：おすすめ */}
+      <div className="mt-6 rounded-2xl bg-stone-50 p-4">
+        <p className="text-xs font-semibold text-stone-700">こんな店舗におすすめ</p>
+        <p className="mt-2 text-sm text-stone-700 leading-relaxed">
+          {plan.recommendedFor}
+        </p>
+      </div>
 
       <div className="mt-8">
         {/* ButtonにclassNameを渡さず、ラッパー側で幅を制御 */}
@@ -233,6 +298,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         </div>
       </div>
 
+      {/* ✅ 注意書き（現状維持） */}
       <p className="mt-4 text-xs text-stone-500">
         ※ Standard は Basic の全内容を含みます / Premium は Standard の全内容を含みます
       </p>
@@ -243,11 +309,7 @@ function PlanCard({ plan }: { plan: Plan }) {
   );
 }
 
-function CompareTable({
-  section,
-}: {
-  section: FeatureSection;
-}) {
+function CompareTable({ section }: { section: FeatureSection }) {
   return (
     <div className="mt-10 rounded-3xl border border-stone-200 bg-white overflow-hidden">
       <div className="p-6 md:p-8 border-b border-stone-200">
@@ -297,7 +359,10 @@ function CompareTable({
       {/* Mobile cards */}
       <div className="md:hidden p-4 space-y-4">
         {section.rows.map((r) => (
-          <div key={r.label} className="rounded-2xl border border-stone-200 overflow-hidden">
+          <div
+            key={r.label}
+            className="rounded-2xl border border-stone-200 overflow-hidden"
+          >
             <div className="px-4 py-3 bg-stone-50">
               <p className="text-sm font-semibold text-stone-800">{r.label}</p>
             </div>
@@ -354,7 +419,9 @@ export default function GlobalGrowthPlansPage() {
         {/* Initial settings note */}
         <section className="mt-16">
           <div className="rounded-3xl border border-stone-200 bg-stone-50 p-8">
-            <h3 className="text-lg font-semibold text-stone-900">初期設定について</h3>
+            <h3 className="text-lg font-semibold text-stone-900">
+              初期設定について
+            </h3>
             <p className="mt-3 text-sm text-stone-700 leading-relaxed whitespace-pre-line">
               相談で多い内容を「初期設定」として組み込んでいます。
               {"\n"}
