@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/getDictionary";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default async function GlobalGrowthPage({
   params,
@@ -53,20 +54,20 @@ export default async function GlobalGrowthPage({
               </div>
             </div>
 
-            {/* Instagram profile-ish 9-grid */}
+            {/* Instagram grid image */}
             <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
-              <div className="grid grid-cols-3 gap-2">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square rounded-xl bg-gradient-to-br from-stone-200 to-stone-100"
-                  />
-                ))}
+              <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/business/instagram-grid.jpg"
+                  alt="Instagram grid preview"
+                  fill
+                  priority
+                  className="object-cover"
+                />
               </div>
+
               <p className="mt-3 text-xs text-stone-500">
-                {locale === "ja"
-                  ? "※仮のグリッド（後で実画像に差し替え）"
-                  : "Placeholder grid (replace with real visuals later)"}
+                {locale === "ja" ? "イメージ写真" : "Sample Image"}
               </p>
             </div>
           </div>
