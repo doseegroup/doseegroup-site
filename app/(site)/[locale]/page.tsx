@@ -3,7 +3,6 @@ import { getDictionary } from "@/lib/getDictionary";
 import HomeHero from "@/components/sections/HomeHero";
 import HomeAbout from "@/components/sections/HomeAbout";
 import HomeBusiness from "@/components/sections/HomeBusiness";
-import HomeCTA from "@/components/sections/HomeCTA";
 
 export default async function HomePage({
   params,

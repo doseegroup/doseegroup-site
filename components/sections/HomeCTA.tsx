@@ -19,7 +19,7 @@ export default function HomeCTA({
       <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/40 to-white/60" />
 
       <Container>
-        <div className="relative rounded-3xl bg-stone-900/95 text-white p-10 md:p-12 shadow-lg">
+        <div className="relative rounded-3xl bg-stone-900/95 text-white p-6 md:p-12 shadow-lg">
           <div className="text-center">
             <h3 className="text-2xl md:text-3xl font-semibold">{title}</h3>
 

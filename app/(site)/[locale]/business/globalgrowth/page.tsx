@@ -24,14 +24,14 @@ export default async function GlobalGrowthPage({
     <div className="py-14 md:py-20">
       <Container>
         {/* Hero */}
-        <section className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 md:p-12">
+        <section className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-5 md:p-12">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <p className="text-xs font-semibold tracking-widest text-stone-500 uppercase">
                 {lp.hero.eyebrow}
               </p>
 
-              <h1 className="mt-3 text-3xl md:text-5xl font-semibold text-stone-900 leading-tight">
+              <h1 className="mt-3 text-2xl sm:text-3xl md:text-5xl font-semibold text-stone-900 leading-tight">
                 {lp.hero.title}
               </h1>
 
@@ -127,7 +127,7 @@ export default async function GlobalGrowthPage({
 
         {/* Consult CTA */}
         <section className="mt-16">
-          <div className="rounded-3xl border border-stone-200 bg-stone-900 p-8 md:p-10 text-white">
+          <div className="rounded-3xl border border-stone-200 bg-stone-900 p-5 md:p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-semibold">
               {lp.consult.title}
             </h2>

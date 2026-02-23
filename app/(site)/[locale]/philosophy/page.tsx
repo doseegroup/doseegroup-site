@@ -37,6 +37,7 @@ export default async function PhilosophyPage({
             width={1600}
             height={900}
             priority
+            className="w-full h-auto"
           />
         </div>
 
@@ -79,6 +80,7 @@ export default async function PhilosophyPage({
             alt={dict.images.practiceAlt ?? "Practice diagram"}
             width={1600}
             height={900}
+            className="w-full h-auto"
           />
         </div>
       </Container>

@@ -3,12 +3,13 @@ import { getDictionary } from "@/lib/getDictionary";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-export default function ContactPage({
+export default async function ContactPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = isLocale(params.locale) ? (params.locale as Locale) : "ja";
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
   const dict = getDictionary(locale);
 
   return (

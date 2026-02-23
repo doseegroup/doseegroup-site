@@ -19,7 +19,7 @@ export default function HomeHero({
         <div className="relative py-20 md:py-28">
           {/* 中央寄せの“面” */}
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight whitespace-pre-line">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight whitespace-pre-line">
               {title}
             </h1>
 

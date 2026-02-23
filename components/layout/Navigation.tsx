@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import type { Locale } from "@/lib/i18n";
 import { otherLocale } from "@/lib/i18n";
 
@@ -29,6 +30,20 @@ export default function Navigation({
   const pathname = usePathname();
   const toLocale = otherLocale(locale);
   const switchHref = replaceLocaleInPath(pathname, toLocale);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // ページ遷移時にメニューを閉じる
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  // メニュー開閉時にbodyスクロールを制御
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const items = [
     { href: `/${locale}/philosophy`, label: dict.nav.philosophy },
@@ -48,6 +63,7 @@ export default function Navigation({
           DoSee Group
         </Link>
 
+        {/* デスクトップナビ */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-stone-700">
           {items.map((it) => (
             <Link
@@ -68,8 +84,49 @@ export default function Navigation({
           >
             {toLocale.toUpperCase()}
           </Link>
+
+          {/* ハンバーガーボタン（モバイルのみ） */}
+          <button
+            className="md:hidden flex items-center justify-center w-8 h-8 text-stone-700 hover:text-stone-900 transition"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? (
+              // ✕ アイコン
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
+                <line x1="4" y1="4" x2="16" y2="16" />
+                <line x1="16" y1="4" x2="4" y2="16" />
+              </svg>
+            ) : (
+              // ☰ アイコン
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
+                <line x1="3" y1="6" x2="17" y2="6" />
+                <line x1="3" y1="10" x2="17" y2="10" />
+                <line x1="3" y1="14" x2="17" y2="14" />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
+
+      {/* モバイルメニュー */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-stone-200 bg-stone-50/95 backdrop-blur">
+          <nav className="mx-auto w-[min(1100px,92vw)] py-4 flex flex-col gap-0">
+            {items.map((it) => (
+              <Link
+                key={it.href}
+                href={it.href}
+                className="py-3.5 text-sm text-stone-700 hover:text-stone-900 border-b border-stone-100 last:border-b-0 transition"
+                onClick={() => setMenuOpen(false)}
+              >
+                {it.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

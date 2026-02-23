@@ -96,13 +96,13 @@ export default async function GlobalGrowthConsultPage({
     <div className="py-14 md:py-20">
       <Container>
         {/* 1) Hero */}
-        <section className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-8 md:p-12">
+        <section className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-5 md:p-12">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold tracking-widest text-stone-500 uppercase">
               DoSee Global Growth
             </p>
 
-            <h1 className="mt-3 text-3xl md:text-5xl font-semibold text-stone-900 leading-tight">
+            <h1 className="mt-3 text-2xl sm:text-3xl md:text-5xl font-semibold text-stone-900 leading-tight">
               {hero.title}
             </h1>
 
@@ -183,7 +183,7 @@ export default async function GlobalGrowthConsultPage({
 
         {/* 5) Booking block (most important) */}
         <section className="mt-16">
-          <div className="rounded-3xl border border-stone-200 bg-stone-900 p-8 md:p-10 text-white">
+          <div className="rounded-3xl border border-stone-200 bg-stone-900 p-5 md:p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-semibold">{booking.title}</h2>
             <p className="mt-3 text-white/80 leading-relaxed whitespace-pre-line">
               {booking.lead}
@@ -203,7 +203,7 @@ export default async function GlobalGrowthConsultPage({
 
         {/* 6) Bottom CTA repeat */}
         <section className="mt-10">
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 md:p-10">
+          <div className="rounded-3xl border border-stone-200 bg-white p-5 md:p-10">
             <h3 className="text-xl md:text-2xl font-semibold text-stone-900">
               {isJa ? "無料相談（30分）" : "Free Consultation (30 min)"}
             </h3>
