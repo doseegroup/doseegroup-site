@@ -2,6 +2,7 @@ import { isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/getDictionary";
 import HomeHero from "@/components/sections/HomeHero";
 import HomeAbout from "@/components/sections/HomeAbout";
+import HomeGrowth from "@/components/sections/HomeGrowth";
 import HomeBusiness from "@/components/sections/HomeBusiness";
 
 export default async function HomePage({
@@ -26,6 +27,12 @@ export default async function HomePage({
         title={dict.sections.aboutTitle}
         body={dict.sections.aboutBody}
         ctaLabel={dict.sections.aboutCta}
+      />
+
+      <HomeGrowth
+        locale={locale}
+        eyebrow={dict.sections.growthEyebrow}
+        title={dict.sections.growthTitle}
       />
 
       <HomeBusiness locale={locale} />

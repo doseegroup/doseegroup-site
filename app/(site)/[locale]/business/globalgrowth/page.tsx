@@ -73,6 +73,94 @@ export default async function GlobalGrowthPage({
           </div>
         </section>
 
+        {/* ─── Slide 1: Visual Intro ─── */}
+        <section className="mt-20">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            {/*
+              左側の画像エリア
+              画像ファイルを /public/images/business/globalgrowth-globe.png に配置してください
+            */}
+            <div className="relative aspect-[4/3]">
+              <Image
+                src="/images/business/globalgrowth-globe.png"
+                alt={locale === "ja" ? "グローバル展開イメージ" : "Global expansion image"}
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <p className="text-xs tracking-widest text-stone-500 uppercase">
+                {lp.intro.eyebrow}
+              </p>
+              <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
+                {lp.intro.title}
+              </h2>
+              <p className="mt-5 text-stone-600 leading-relaxed">{lp.intro.sub}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Slide 2: 事業理念 Visual ─── */}
+        <section className="mt-16">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            {/*
+              左側の画像エリア
+              画像ファイルを /public/images/business/globalgrowth-map.png に配置してください
+            */}
+            <div className="relative aspect-[4/3] pl-8 md:pl-16">
+              <Image
+                src="/images/business/globalgrowth-map.png"
+                alt={locale === "ja" ? "日本地図・集客イメージ" : "Japan map illustration"}
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-stone-900">
+                {lp.philosophyVisual.title}
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Slide 3: Mission ─── */}
+        <section className="mt-16 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 via-sky-100/70 to-indigo-50 p-10 md:p-16">
+          <div className="grid gap-12 md:grid-cols-2 md:items-start">
+            <div>
+              <p className="text-sm tracking-widest text-stone-600">
+                {lp.mission.tagline}
+              </p>
+              <p className="mt-8 text-stone-700 leading-loose whitespace-pre-line">
+                {lp.mission.body}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold tracking-widest text-stone-500 uppercase">
+                {lp.mission.missionEyebrow}
+              </p>
+              <div className="mt-5">
+                {(lp.mission.missionLines as readonly string[]).map((line) => (
+                  <p key={line} className="text-4xl md:text-5xl font-bold text-stone-900 leading-snug">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Slide 4: Tagline ─── */}
+        <section className="mt-16 py-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-stone-900 leading-snug whitespace-pre-line">
+              {lp.tagline.heading}
+            </h2>
+            <p className="mt-8 text-stone-700 leading-loose">
+              {lp.tagline.body}
+            </p>
+          </div>
+        </section>
+
         {/* Who / What */}
         <section className="mt-16">
           <SectionHeader title={lp.who.title} />

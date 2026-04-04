@@ -22,6 +22,9 @@ export const ja = {
   日常にきちんと効く仕組みをつくります。`,
     aboutCta: "Our Philosophy →",
 
+    growthEyebrow: "インバウンド向け",
+    growthTitle: "飲食特化SNS 運用事業",
+
     businessTitle: "Our Business",
     ctaTitle: "Work with DoSee Group",
     ctaBody:
@@ -43,6 +46,24 @@ export const ja = {
     comingSoon:
       "新たな事業領域は、順次立ち上げを予定しています。",
     globalGrowthLP: {
+      intro: {
+        eyebrow: "DOSEE Global Growth",
+        title: "店の魅力を、次の景色へ",
+        sub: "SNS運用・検索導線・データ分析で成果を出す",
+      },
+      philosophyVisual: {
+        title: "事業理念",
+      },
+      mission: {
+        tagline: "Do it first, See the results",
+        body: "DoSee Groupは、「行動から結果をつくる」実行型の事業グループです。アイデアで終わらせず、まず動き、変化で価値を証明します。\n\n派手さより、続く成果。\n日常にきちんと続く仕組みを作ります。",
+        missionEyebrow: "MISSION",
+        missionLines: ["世界をつなぐ", "社会をつなぐ", "人をつなぐ"],
+      },
+      tagline: {
+        heading: '"見つかる"だけで終わらせない。\n来店につながるSNSへ。',
+        body: "外国人観光客が店を探す流れに合わせて、SNS運用・英語対応・予約導線を設計します。プロによるSNS運用でインバウンド集客を強化したい飲食店が観光客にとって「分かる店」に変えていく。",
+      },
       hero: {
         eyebrow: "Japan × Global",
         title: "インバウンド集客を、仕組みでつくる。",

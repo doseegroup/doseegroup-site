@@ -22,6 +22,9 @@ export const en = {
   We build systems that truly work in everyday life.`,
     aboutCta: "Our Philosophy →",
 
+    growthEyebrow: "For Inbound Travelers",
+    growthTitle: "Restaurant-Focused\nSNS Management",
+
     businessTitle: "Our Business",
     ctaTitle: "Work with DoSee Group",
     ctaBody:
@@ -45,6 +48,24 @@ export const en = {
     comingSoon:
       "Additional business areas will be launched in the future.",
     globalGrowthLP: {
+      intro: {
+        eyebrow: "DOSEE Global Growth",
+        title: "Take Your Restaurant's Story Global",
+        sub: "SNS management · Search optimization · Data analytics",
+      },
+      philosophyVisual: {
+        title: "Our Mission",
+      },
+      mission: {
+        tagline: "Do it first, See the results",
+        body: "DoSee Group is an execution-driven business group that turns action into results. We move first and prove value through real, tangible change.\n\nWe value sustainable outcomes over hype.\nWe build systems that truly work in everyday life.",
+        missionEyebrow: "MISSION",
+        missionLines: ["Connect the world", "Connect society", "Connect people"],
+      },
+      tagline: {
+        heading: 'Beyond "being found."\nToward visits that actually happen.',
+        body: "We design SNS operations, English responses, and reservation pathways aligned with how international travelers search. We turn restaurants into venues that international guests can clearly understand and confidently choose.",
+      },
       hero: {
         eyebrow: "Japan × Global",
         title: "Build inbound growth with a system — not guesswork.",
