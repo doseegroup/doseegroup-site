@@ -55,7 +55,7 @@ export default async function GlobalGrowthAboutPage({
             */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
-                src="/images/business/globalgrowth-about-1.jpg"
+                src="/images/business/globalgrowth-about-1.png"
                 alt="外国人観光客が飲食店を楽しむ様子"
                 fill
                 className="object-cover"
@@ -168,7 +168,7 @@ export default async function GlobalGrowthAboutPage({
             */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
-                src="/images/business/globalgrowth-about-4.jpg"
+                src="/images/business/globalgrowth-about-2.png"
                 alt="インバウンド向けSNS運用画面"
                 fill
                 className="object-cover"
@@ -239,7 +239,7 @@ export default async function GlobalGrowthAboutPage({
             */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
-                src="/images/business/globalgrowth-about-6.jpg"
+                src="/images/business/globalgrowth-about-3.png"
                 alt="スマホで料理写真を撮影する様子"
                 fill
                 className="object-cover"
