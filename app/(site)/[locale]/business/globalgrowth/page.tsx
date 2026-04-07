@@ -124,7 +124,7 @@ export default async function GlobalGrowthPage({
 
         {/* ─── Slide 3: Inbound SNS ─── */}
         <section className="mt-16 py-10">
-          <h2 className="text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
             {lp.mission.title}
           </h2>
           <p className="mt-10 text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
@@ -169,7 +169,7 @@ export default async function GlobalGrowthPage({
             />
             {/* 左側テキストオーバーレイ */}
             <div className="absolute inset-0 flex items-center">
-              <p className="pl-10 md:pl-16 text-4xl md:text-6xl font-bold text-stone-900">
+              <p className="pl-5 sm:pl-10 md:pl-16 text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900">
                 SEO対策
               </p>
             </div>
@@ -203,7 +203,7 @@ export default async function GlobalGrowthPage({
             />
             {/* 右下テキストオーバーレイ */}
             <div className="absolute inset-0 flex items-end justify-end">
-              <p className="pr-10 pb-8 md:pr-16 md:pb-12 text-4xl md:text-6xl font-bold text-stone-900">
+              <p className="pr-5 pb-4 sm:pr-10 sm:pb-8 md:pr-16 md:pb-12 text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900">
                 MEO対策
               </p>
             </div>

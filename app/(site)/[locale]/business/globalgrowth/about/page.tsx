@@ -14,23 +14,23 @@ export default async function GlobalGrowthAboutPage({
   const consultPath = `/${locale}/business/globalgrowth/consult`;
 
   return (
-    <div className="py-14 md:py-20">
+    <div className="py-10 md:py-20">
       <Container>
 
         {/* ─── Slide 1: 市場の課題 ─── */}
         <section>
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             市場の課題：インバウンドの「機会損失」
           </h2>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-start">
+          <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
             {/* Left */}
             <div>
-              <p className="text-xl font-bold text-teal-500">
+              <p className="text-lg md:text-xl font-bold text-teal-500">
                 外国人が「不安」で離脱している
               </p>
-              <div className="mt-4 rounded-xl border border-stone-300 bg-stone-50 px-5 py-4 text-stone-700 leading-relaxed text-sm">
+              <div className="mt-4 rounded-xl border border-stone-300 bg-stone-50 px-4 py-3 md:px-5 md:py-4 text-stone-700 leading-relaxed text-sm">
                 観光客は雰囲気だけで店を選びません。具体的情報が欠けていると、たとえ興味を持たれても最後の一歩で離脱します。
               </div>
               <ul className="mt-6 space-y-4">
@@ -50,9 +50,6 @@ export default async function GlobalGrowthAboutPage({
             </div>
 
             {/* Right: image */}
-            {/*
-              画像ファイルを /public/images/business/globalgrowth-about-1.jpg に配置してください
-            */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-1.png"
@@ -65,16 +62,16 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 2: 店選びの現実 ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             店選びの現実：必要なのは「納得」
           </h2>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
+          <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
             {/* Left: Check */}
             <div className="text-center">
-              <p className="text-7xl md:text-9xl font-extrabold text-orange-500 leading-none">
+              <p className="text-5xl sm:text-7xl md:text-9xl font-extrabold text-orange-500 leading-none">
                 Check
               </p>
               <p className="mt-4 text-stone-600">情報の充実度が来店を左右する</p>
@@ -82,7 +79,7 @@ export default async function GlobalGrowthAboutPage({
 
             {/* Right: 検索行動 */}
             <div>
-              <p className="text-xl font-bold text-teal-500">検索行動の黄金ルート</p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">検索行動の黄金ルート</p>
               <p className="mt-1 font-semibold text-orange-500">
                 Google Maps → Instagram
               </p>
@@ -97,16 +94,16 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 3: 2つの欠落 ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             飲食店が抱える「2つの欠落」
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 md:mt-12 grid gap-6 md:grid-cols-2">
             {/* 1. 説明の欠落 */}
             <div>
-              <div className="rounded-2xl border border-stone-200 bg-white p-7">
+              <div className="rounded-2xl border border-stone-200 bg-white p-5 md:p-7">
                 <p className="text-lg font-bold text-teal-500">1. 説明の欠落</p>
                 <p className="mt-3 text-stone-700 leading-relaxed">
                   味は良いのに「何の店か」を英語で説明できていない。初見の外国人が安心して入れる設計がない。
@@ -119,7 +116,7 @@ export default async function GlobalGrowthAboutPage({
 
             {/* 2. リソースの欠落 */}
             <div>
-              <div className="rounded-2xl border border-stone-200 bg-white p-7">
+              <div className="rounded-2xl border border-stone-200 bg-white p-5 md:p-7">
                 <p className="text-lg font-bold text-teal-500">2. リソースの欠落</p>
                 <p className="mt-3 text-stone-700 leading-relaxed">
                   忙しくてSNS更新が続かない。英語対応できるスタッフがいない、撮影する余裕もない。
@@ -135,16 +132,16 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 4: 解決策 ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             解決策：インバウンド特化SNS運用
           </h2>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-start">
+          <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
             {/* Left */}
             <div>
-              <p className="text-xl font-bold text-teal-500">SNSは「入口」から「導線」へ</p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">SNSは「入口」から「導線」へ</p>
               <p className="mt-3 text-stone-700 leading-relaxed">
                 単なる投稿制作ではなく、プロフィール・ハイライト・DM対応まで一貫して設計。「行動しやすい状態」を維持します。
               </p>
@@ -163,9 +160,6 @@ export default async function GlobalGrowthAboutPage({
             </div>
 
             {/* Right: image */}
-            {/*
-              画像ファイルを /public/images/business/globalgrowth-about-4.jpg に配置してください
-            */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-2.png"
@@ -178,13 +172,13 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 5: 3つの柱 ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             成果を支える3つの柱
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 md:mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 icon: "🚪",
@@ -204,7 +198,7 @@ export default async function GlobalGrowthAboutPage({
             ].map((col) => (
               <div
                 key={col.title}
-                className="rounded-3xl border border-stone-200 bg-white p-8 text-center"
+                className="rounded-3xl border border-stone-200 bg-white p-6 md:p-8 text-center"
               >
                 <p className="text-4xl">{col.icon}</p>
                 <p className="mt-4 text-lg font-bold text-teal-500">{col.title}</p>
@@ -215,16 +209,16 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 6: 撮影なし運用モデル ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             「撮影なし」運用モデル
           </h2>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
+          <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
             {/* Left */}
             <div>
-              <p className="text-xl font-bold text-teal-500">素材を活かし、効率を最大化</p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">素材を活かし、効率を最大化</p>
               <p className="mt-4 text-stone-700 leading-relaxed">
                 店舗が保有する既存の写真・動画を活用し、クリエイティブを量産します。
               </p>
@@ -234,9 +228,6 @@ export default async function GlobalGrowthAboutPage({
             </div>
 
             {/* Right: image */}
-            {/*
-              画像ファイルを /public/images/business/globalgrowth-about-6.jpg に配置してください
-            */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-3.png"
@@ -249,13 +240,13 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── Slide 7: 運用のスタンス ─── */}
-        <section className="mt-24">
-          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold text-stone-900">
-            <span className="w-1.5 h-8 rounded-full bg-orange-500 shrink-0" />
+        <section className="mt-16 md:mt-24">
+          <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
+            <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
             運用のスタンス：現場に効く改善
           </h2>
 
-          <div className="mt-12 space-y-6">
+          <div className="mt-8 md:mt-12 space-y-5 md:space-y-6">
             {[
               {
                 icon: "⚡",
@@ -278,8 +269,8 @@ export default async function GlobalGrowthAboutPage({
                 body: "20年以上の海外経験・飲食店運営経験者がAI出力を精査。",
               },
             ].map((item) => (
-              <div key={item.label} className="flex items-start gap-4">
-                <span className="text-2xl shrink-0 w-8 text-center">{item.icon}</span>
+              <div key={item.label} className="flex items-start gap-3 md:gap-4">
+                <span className="text-xl md:text-2xl shrink-0 w-8 text-center">{item.icon}</span>
                 <div>
                   <span className="font-bold text-stone-900">{item.label}：</span>
                   <span className="text-stone-700">{item.body}</span>
@@ -290,12 +281,12 @@ export default async function GlobalGrowthAboutPage({
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="mt-24">
-          <div className="rounded-3xl bg-stone-900 p-10 md:p-14 text-white text-center">
-            <h2 className="text-2xl md:text-3xl font-bold">
+        <section className="mt-16 md:mt-24">
+          <div className="rounded-3xl bg-stone-900 p-7 sm:p-10 md:p-14 text-white text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
               インバウンド集客を、仕組みでつくる。
             </h2>
-            <p className="mt-4 text-white/70 leading-relaxed">
+            <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">
               まずは30分の無料相談で、現状の整理と方向性の確認だけ行います。
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
