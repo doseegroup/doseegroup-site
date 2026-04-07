@@ -75,6 +75,10 @@ export default async function GlobalGrowthPage({
 
         {/* ─── Slide 1: Visual Intro ─── */}
         <section className="mt-20">
+          {/* eyebrow：左上に配置 */}
+          <p className="text-xs tracking-widest text-stone-500 uppercase mb-6">
+            {lp.intro.eyebrow}
+          </p>
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             {/*
               左側の画像エリア
@@ -88,75 +92,133 @@ export default async function GlobalGrowthPage({
                 className="object-contain"
               />
             </div>
-            <div>
-              <p className="text-xs tracking-widest text-stone-500 uppercase">
-                {lp.intro.eyebrow}
+            {/* 右側：3ブロック・中央揃え */}
+            <div className="text-center space-y-8">
+              <p className="text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
+                {lp.intro.lead}
               </p>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-                {lp.intro.title}
-              </h2>
-              <p className="mt-5 text-stone-600 leading-relaxed">{lp.intro.sub}</p>
+              <p className="text-base md:text-lg text-stone-700 leading-relaxed whitespace-pre-line">
+                {lp.intro.body}
+              </p>
+              <p className="text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
+                {lp.intro.closing}
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ─── Slide 2: 事業理念 Visual ─── */}
+        {/* ─── Slide 2: Full-width Image ─── */}
+        {/*
+          画像ファイルを /public/images/business/globalgrowth-phone.jpg に配置してください
+        */}
         <section className="mt-16">
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            {/*
-              左側の画像エリア
-              画像ファイルを /public/images/business/globalgrowth-map.png に配置してください
-            */}
-            <div className="relative aspect-[4/3] pl-8 md:pl-16">
-              <Image
-                src="/images/business/globalgrowth-map.png"
-                alt={locale === "ja" ? "日本地図・集客イメージ" : "Japan map illustration"}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-stone-900">
-                {lp.philosophyVisual.title}
-              </h2>
-            </div>
+          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden">
+            <Image
+              src="/images/business/globalgrowth-phone.png"
+              alt={locale === "ja" ? "インバウンド向けSNS運用イメージ" : "Inbound SNS marketing image"}
+              fill
+              className="object-cover"
+            />
           </div>
         </section>
 
-        {/* ─── Slide 3: Mission ─── */}
-        <section className="mt-16 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 via-sky-100/70 to-indigo-50 p-10 md:p-16">
-          <div className="grid gap-12 md:grid-cols-2 md:items-start">
-            <div>
-              <p className="text-sm tracking-widest text-stone-600">
-                {lp.mission.tagline}
-              </p>
-              <p className="mt-8 text-stone-700 leading-loose whitespace-pre-line">
-                {lp.mission.body}
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold tracking-widest text-stone-500 uppercase">
-                {lp.mission.missionEyebrow}
-              </p>
-              <div className="mt-5">
-                {(lp.mission.missionLines as readonly string[]).map((line) => (
-                  <p key={line} className="text-4xl md:text-5xl font-bold text-stone-900 leading-snug">
-                    {line}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── Slide 4: Tagline ─── */}
+        {/* ─── Slide 3: Inbound SNS ─── */}
         <section className="mt-16 py-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-stone-900 leading-snug whitespace-pre-line">
-              {lp.tagline.heading}
-            </h2>
-            <p className="mt-8 text-stone-700 leading-loose">
-              {lp.tagline.body}
+          <h2 className="text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
+            {lp.mission.title}
+          </h2>
+          <p className="mt-10 text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line">
+            {lp.mission.body}
+          </p>
+
+          {/* CTA → about ページへ */}
+          <Link
+            href={`/${locale}/business/globalgrowth/about`}
+            className="group mt-10 inline-flex items-center gap-2 text-sm text-stone-500 transition-all hover:text-stone-800 hover:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
+          >
+            詳しく見る
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform group-hover:translate-x-1"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
+        </section>
+
+        {/* ─── Slide 4: SEO ─── */}
+        {/*
+          画像ファイルを /public/images/business/globalgrowth-seo.png に配置してください
+        */}
+        <section className="mt-16">
+          {/* 画像 + テキストオーバーレイ */}
+          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden">
+            <Image
+              src="/images/business/globalgrowth-seo.png"
+              alt={locale === "ja" ? "SEO対策" : "SEO strategy"}
+              fill
+              className="object-cover"
+            />
+            {/* 左側テキストオーバーレイ */}
+            <div className="absolute inset-0 flex items-center">
+              <p className="pl-10 md:pl-16 text-4xl md:text-6xl font-bold text-stone-900">
+                SEO対策
+              </p>
+            </div>
+          </div>
+
+          {/* テキストセクション */}
+          <div className="mt-10 rounded-3xl bg-stone-100 px-8 py-14 md:px-20 md:py-20 text-center space-y-8">
+            <p className="text-lg md:text-xl text-stone-800 leading-relaxed">
+              訪日外国人の検索行動に特化したSEO対策を提供します。
+            </p>
+            <p className="text-base md:text-lg text-stone-700 leading-loose whitespace-pre-line">
+              {`海外ユーザーの検索意図をベースに、\n多言語キーワード設計・コンテンツ構築・内部SEOを最適化。`}
+            </p>
+            <p className="text-base md:text-lg text-stone-700 leading-loose whitespace-pre-line">
+              {`単なるアクセス増加ではなく、\n「来店・予約につながる検索流入」を獲得するための設計を行います。`}
+            </p>
+          </div>
+        </section>
+
+        {/* ─── Slide 5: MEO ─── */}
+        {/*
+          画像ファイルを /public/images/business/globalgrowth-meo.png に配置してください
+        */}
+        <section className="mt-10">
+          <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden">
+            <Image
+              src="/images/business/globalgrowth-meo.png"
+              alt={locale === "ja" ? "MEO対策" : "MEO strategy"}
+              fill
+              className="object-cover"
+            />
+            {/* 右下テキストオーバーレイ */}
+            <div className="absolute inset-0 flex items-end justify-end">
+              <p className="pr-10 pb-8 md:pr-16 md:pb-12 text-4xl md:text-6xl font-bold text-stone-900">
+                MEO対策
+              </p>
+            </div>
+          </div>
+
+          {/* テキストセクション */}
+          <div className="mt-10 rounded-3xl bg-stone-100 px-8 py-14 md:px-20 md:py-20 text-center space-y-8">
+            <p className="text-lg md:text-xl text-stone-800 leading-relaxed">
+              訪日外国人の来店獲得に特化したMEO対策を提供します。
+            </p>
+            <p className="text-base md:text-lg text-stone-700 leading-loose whitespace-pre-line">
+              {`Googleマップ上での露出最大化に加え、\n英語対応・レビュー設計・写真最適化まで一体化。`}
+            </p>
+            <p className="text-base md:text-lg text-stone-700 leading-loose whitespace-pre-line">
+              {`「見つかる」だけでなく「比較されて選ばれる」状態を構築し、\n検索から来店までの転換率を高めます。`}
             </p>
           </div>
         </section>

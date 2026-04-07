@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 
 // ✅ 追加（Particles）
-import ParticlesCanvas from "@/components/effects/ParticlesCanvas";
+import ConditionalParticles from "@/components/effects/ConditionalParticles";
 
 export const dynamicParams = false;
 
@@ -67,7 +67,7 @@ export default async function LocaleLayout({
       <JsonLd locale={locale} />
 
       {/* ✅ 背景（全ページ共通） */}
-      <ParticlesCanvas />
+      <ConditionalParticles />
 
       {/* ✅ 前面コンテンツ */}
       <div className="relative z-10 min-h-dvh flex flex-col">

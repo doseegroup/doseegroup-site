@@ -50,17 +50,16 @@ export const en = {
     globalGrowthLP: {
       intro: {
         eyebrow: "DOSEE Global Growth",
-        title: "Take Your Restaurant's Story Global",
-        sub: "SNS management · Search optimization · Data analytics",
+        lead: "Specialized SNS marketing\nto drive inbound restaurant visits.",
+        body: "Built on 20 years of overseas experience and restaurant operations,\ndesigned from how international guests actually choose a place.\nFrom English posts to story management to conversion pathways—\nfully integrated so you're not just \u201Cfound,\u201D\nbut \u201Cchosen and visited.\u201D",
+        closing: "The ideal solution for restaurants\nserious about growing inbound sales.",
       },
       philosophyVisual: {
         title: "Our Mission",
       },
       mission: {
-        tagline: "Do it first, See the results",
-        body: "DoSee Group is an execution-driven business group that turns action into results. We move first and prove value through real, tangible change.\n\nWe value sustainable outcomes over hype.\nWe build systems that truly work in everyday life.",
-        missionEyebrow: "MISSION",
-        missionLines: ["Connect the world", "Connect society", "Connect people"],
+        title: "Inbound-Focused SNS Management",
+        body: "They're interested — but they don't take that final step.\nThe most common reason is a lack of information.\nFor international visitors, a Japanese-only SNS creates uncertainty\nand leads to drop-off right before they visit.\n\nWe remove that uncertainty by designing information and conversion pathways\nthat communicate clearly in English.\nFrom posts to profile, highlights, and DM responses —\nwe create a state where guests feel confident enough to walk through the door.\n\nAnd we do it without any shooting sessions,\nworking entirely from your existing assets\nto deliver low-cost SNS management that drives real visits.",
       },
       tagline: {
         heading: 'Beyond "being found."\nToward visits that actually happen.',
