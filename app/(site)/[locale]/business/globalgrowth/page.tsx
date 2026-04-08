@@ -58,7 +58,7 @@ export default async function GlobalGrowthPage({
             <div className="rounded-3xl border border-stone-200 bg-stone-50 p-5">
               <div className="relative aspect-square overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/business/instagram-grid.jpg"
+                  src="/images/business/instagram-grid.png"
                   alt="Instagram grid preview"
                   fill
                   priority
@@ -134,7 +134,7 @@ export default async function GlobalGrowthPage({
           {/* CTA → about ページへ */}
           <Link
             href={`/${locale}/business/globalgrowth/about`}
-            className="group mt-10 inline-flex items-center gap-2 text-sm text-stone-400 opacity-60 transition-all duration-300 hover:opacity-100 hover:text-stone-900 hover:-translate-y-1 hover:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
+            className="group mt-10 inline-flex items-center gap-2 text-sm font-semibold text-stone-900 transition-all duration-300 hover:text-stone-950 hover:-translate-y-1 hover:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
           >
             詳しく見る
             <svg
