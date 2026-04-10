@@ -74,16 +74,12 @@ export default async function GlobalGrowthPage({
         </section>
 
         {/* ─── Slide 1: Visual Intro ─── */}
-        <section className="mt-20">
+        <section className="mt-12 md:mt-20">
           {/* eyebrow：左上に配置 */}
-          <p className="text-xs tracking-widest text-stone-500 uppercase mb-6">
+          <p className="text-xs tracking-widest text-stone-500 uppercase mb-4 md:mb-6">
             {lp.intro.eyebrow}
           </p>
-          <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            {/*
-              左側の画像エリア
-              画像ファイルを /public/images/business/globalgrowth-globe.png に配置してください
-            */}
+          <div className="grid gap-6 md:gap-10 md:grid-cols-2 md:items-center">
             <div className="relative aspect-[4/3]">
               <Image
                 src="/images/business/globalgrowth-globe.png"
@@ -93,14 +89,14 @@ export default async function GlobalGrowthPage({
               />
             </div>
             {/* 右側：3ブロック・中央揃え */}
-            <div className="text-center space-y-8">
-              <p className="text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
+            <div className="text-center space-y-6 md:space-y-8">
+              <p className="text-lg sm:text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
                 {lp.intro.lead}
               </p>
-              <p className="text-base md:text-lg text-stone-700 leading-relaxed whitespace-pre-line">
+              <p className="text-sm sm:text-base md:text-lg text-stone-700 leading-relaxed whitespace-pre-line">
                 {lp.intro.body}
               </p>
-              <p className="text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
+              <p className="text-lg sm:text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
                 {lp.intro.closing}
               </p>
             </div>
@@ -123,11 +119,11 @@ export default async function GlobalGrowthPage({
         </section>
 
         {/* ─── Slide 3: Inbound SNS ─── */}
-        <section className="mt-16 py-10">
+        <section className="mt-12 md:mt-16 py-6 md:py-10">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
             {lp.mission.title}
           </h2>
-          <p className="mt-10 text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
+          <p className="mt-6 md:mt-10 text-base sm:text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
             {lp.mission.body}
           </p>
 
@@ -176,14 +172,14 @@ export default async function GlobalGrowthPage({
           </div>
 
           {/* テキストセクション */}
-          <div className="mt-10 rounded-3xl bg-stone-100 px-8 py-14 md:px-20 md:py-20 text-center space-y-8">
-            <p className="text-xl md:text-2xl font-black text-stone-800 leading-relaxed">
+          <div className="mt-6 md:mt-10 rounded-3xl bg-stone-100 px-5 py-8 sm:px-8 sm:py-12 md:px-20 md:py-20 text-center space-y-6 md:space-y-8">
+            <p className="text-lg sm:text-xl md:text-2xl font-black text-stone-800 leading-relaxed">
               訪日外国人の検索行動に特化したSEO対策を提供します。
             </p>
-            <p className="text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
               {`海外ユーザーの検索意図をベースに、\n多言語キーワード設計・コンテンツ構築・内部SEOを最適化。`}
             </p>
-            <p className="text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
               {`単なるアクセス増加ではなく、\n「来店・予約につながる検索流入」を獲得するための設計を行います。`}
             </p>
           </div>
@@ -210,57 +206,57 @@ export default async function GlobalGrowthPage({
           </div>
 
           {/* テキストセクション */}
-          <div className="mt-10 rounded-3xl bg-stone-100 px-8 py-14 md:px-20 md:py-20 text-center space-y-8">
-            <p className="text-xl md:text-2xl font-black text-stone-800 leading-relaxed">
+          <div className="mt-6 md:mt-10 rounded-3xl bg-stone-100 px-5 py-8 sm:px-8 sm:py-12 md:px-20 md:py-20 text-center space-y-6 md:space-y-8">
+            <p className="text-lg sm:text-xl md:text-2xl font-black text-stone-800 leading-relaxed">
               訪日外国人の来店獲得に特化したMEO対策を提供します。
             </p>
-            <p className="text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
               {`Googleマップ上での露出最大化に加え、\n英語対応・レビュー設計・写真最適化まで一体化。`}
             </p>
-            <p className="text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl font-black text-stone-700 leading-loose whitespace-pre-line">
               {`「見つかる」だけでなく「比較されて選ばれる」状態を構築し、\n検索から来店までの転換率を高めます。`}
             </p>
           </div>
         </section>
 
         {/* Consult CTA */}
-        <section className="mt-16">
-          <div className="rounded-3xl bg-gradient-to-br from-stone-800 to-stone-950 p-10 md:p-16 text-white">
+        <section className="mt-12 md:mt-16">
+          <div className="rounded-3xl bg-gradient-to-br from-stone-800 to-stone-950 p-6 sm:p-10 md:p-16 text-white">
             <p className="text-xs tracking-widest text-stone-400 uppercase">Free Consult</p>
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-white leading-tight">
+            <h2 className="mt-3 md:mt-4 text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">
               {lp.consult.title}
             </h2>
-            <p className="mt-5 text-lg text-stone-300 leading-relaxed whitespace-pre-line">
+            <p className="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-stone-300 leading-relaxed whitespace-pre-line">
               {lp.consult.lead}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 md:mt-8 flex flex-wrap gap-2 md:gap-3">
               {lp.consult.assures.map((a) => (
                 <span
                   key={a}
-                  className="rounded-full border border-stone-600 px-4 py-1.5 text-sm text-stone-300"
+                  className="rounded-full border border-stone-600 px-3 py-1 md:px-4 md:py-1.5 text-xs md:text-sm text-stone-300"
                 >
                   {a}
                 </span>
               ))}
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
               <a
                 href={consultPath}
-                className="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-stone-900 transition-colors hover:bg-stone-100"
+                className="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-stone-900 transition-colors hover:bg-stone-100 text-center"
               >
                 {lp.consult.cta}
               </a>
               <a
                 href={`/${locale}/business/globalgrowth/service`}
-                className="rounded-full border border-stone-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:border-stone-300"
+                className="rounded-full border border-stone-500 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:border-stone-300 text-center"
               >
                 {lp.hero.ctaSecondary}
               </a>
             </div>
 
-            <p className="mt-6 text-xs text-stone-500 whitespace-pre-line">
+            <p className="mt-5 md:mt-6 text-xs text-stone-500 whitespace-pre-line">
               {lp.consult.footnote}
             </p>
           </div>
@@ -274,7 +270,7 @@ export default async function GlobalGrowthPage({
               <p className="whitespace-pre-line">{lp.who.lead}</p>
             </div>
 
-            <div className="rounded-3xl border border-stone-200 bg-white p-7">
+            <div className="rounded-3xl border border-stone-200 bg-white p-5 md:p-7">
               <ul className="space-y-3 text-stone-800">
                 {lp.who.bullets.map((b) => (
                   <li key={b} className="flex gap-2">
@@ -305,7 +301,7 @@ export default async function GlobalGrowthPage({
         {/* Solution */}
         <section id="service" className="mt-16">
           <SectionHeader title={lp.solution.title} />
-          <div className="mt-6 rounded-3xl border border-stone-200 bg-white p-8">
+          <div className="mt-6 rounded-3xl border border-stone-200 bg-white p-5 md:p-8">
             <ul className="grid gap-3 md:grid-cols-2 text-stone-800">
               {lp.solution.bullets.map((b) => (
                 <li key={b} className="flex gap-2">
