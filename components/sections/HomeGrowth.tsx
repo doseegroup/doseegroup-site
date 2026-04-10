@@ -27,19 +27,19 @@ export default function HomeGrowth({
       />
 
       <Container>
-        <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-[480px] items-center">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-[280px] md:min-h-[480px] items-center">
           {/* 左カラム：テキスト（クリックで business/globalgrowth へ遷移） */}
           <Link
             href={`/${locale}/business/globalgrowth`}
-            className="group py-20 md:py-32 pl-30 md:pl-32 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
+            className="group py-10 sm:py-16 md:py-32 pl-4 sm:pl-8 md:pl-32 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
           >
-            <p className="text-stone-500 tracking-[0.25em] text-sm mb-5 ml-30 transition-colors group-hover:text-stone-700">
+            <p className="text-stone-500 tracking-[0.25em] text-sm mb-4 md:mb-5 md:ml-30 transition-colors group-hover:text-stone-700">
               {eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-tight text-stone-900 leading-snug transition-colors group-hover:text-stone-600">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-stone-900 leading-snug transition-colors group-hover:text-stone-600">
               {title}
             </h2>
-            <span className="mt-5 inline-flex items-center gap-2 text-sm text-stone-500 transition-all group-hover:text-stone-800 group-hover:gap-3">
+            <span className="mt-4 md:mt-5 inline-flex items-center gap-2 text-sm text-stone-500 transition-all group-hover:text-stone-800 group-hover:gap-3">
               詳しく見る
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,14 +63,9 @@ export default function HomeGrowth({
         </div>
       </Container>
 
-      {/*
-        ─────────────────────────────────────────
-        右半分の背景画像エリア（Mobile）
-        画像ファイルは Desktop と同じ /public/images/bg/growth-bg.png を使用。
-        ─────────────────────────────────────────
-      */}
+      {/* モバイル用画像エリア */}
       <div
-        className="md:hidden h-64 bg-contain bg-center bg-no-repeat"
+        className="md:hidden h-48 sm:h-56 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bg/growth-bg.png')" }}
         aria-hidden="true"
       />
