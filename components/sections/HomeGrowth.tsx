@@ -20,14 +20,15 @@ export default function HomeGrowth({
         bg-contain で画像全体を表示、bg-right-bottom で右下に寄せています。
         ─────────────────────────────────────────
       */}
+      {/* 背景画像（全サイズ共通・テキストの後ろに表示） */}
       <div
-        className="hidden md:block absolute inset-0 bg-contain bg-center bg-no-repeat"
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bg/growth-bg.png')" }}
         aria-hidden="true"
       />
 
       <Container>
-        <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-[280px] md:min-h-[480px] items-center">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-[320px] md:min-h-[480px] items-center">
           {/* 左カラム：テキスト（クリックで business/globalgrowth へ遷移） */}
           <Link
             href={`/${locale}/business/globalgrowth`}
@@ -62,13 +63,6 @@ export default function HomeGrowth({
           <div className="hidden md:block" aria-hidden="true" />
         </div>
       </Container>
-
-      {/* モバイル用画像エリア */}
-      <div
-        className="md:hidden h-48 sm:h-56 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/bg/growth-bg.png')" }}
-        aria-hidden="true"
-      />
     </section>
   );
 }
