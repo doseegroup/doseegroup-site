@@ -310,7 +310,6 @@ export default async function GlobalGrowthPage({
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-stone-500">{lp.solution.note}</p>
           </div>
         </section>
 
