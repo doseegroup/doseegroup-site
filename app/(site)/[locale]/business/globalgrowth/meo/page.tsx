@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { isLocale, type Locale } from "@/lib/i18n";
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
 
 export default async function GlobalGrowthMeoPage({
   params,
@@ -192,11 +192,14 @@ export default async function GlobalGrowthMeoPage({
               ))}
             </div>
 
-            {/* Right: image placeholder */}
+            {/* Right: image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
-              <div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm">
-                Google Maps イメージ
-              </div>
+              <Image
+                src="/images/business/globalgrowth-meo-ai.jpg"
+                alt="AI時代のGoogleマップ検索イメージ"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
@@ -248,19 +251,25 @@ export default async function GlobalGrowthMeoPage({
               {
                 step: "1. SNSで「認知」",
                 body: "インスタ等で魅力を発信し「ここ行ってみたい！」を作る。",
+                img: "/images/business/globalgrowth-meo-step1.jpg",
+                alt: "SNSで認知",
               },
               {
                 step: "2. マップで「確信」",
                 body: "Googleマップで詳細を確認。高評価と丁寧な返信で「安心」へ。",
+                img: "/images/business/globalgrowth-meo-step2.jpg",
+                alt: "マップで確信",
               },
               {
                 step: "3. スムーズな「来店」",
                 body: "経路案内で迷わず到着。ファンになり、また新しい口コミが生まれる。",
+                img: "/images/business/globalgrowth-meo-step3.jpg",
+                alt: "スムーズな来店",
               },
             ].map((card) => (
               <div key={card.step} className="rounded-2xl border border-stone-200 bg-white overflow-hidden">
-                <div className="h-36 bg-stone-100 flex items-center justify-center text-stone-400 text-xs">
-                  イメージ画像
+                <div className="relative h-40 bg-stone-100">
+                  <Image src={card.img} alt={card.alt} fill className="object-cover" />
                 </div>
                 <div className="p-5 md:p-6 text-center">
                   <p className="text-base md:text-lg font-bold text-stone-900 mb-3">{card.step}</p>
@@ -291,11 +300,14 @@ export default async function GlobalGrowthMeoPage({
               </p>
             </div>
 
-            {/* Right: image placeholder */}
+            {/* Right: image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
-              <div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm">
-                レストランイメージ
-              </div>
+              <Image
+                src="/images/business/globalgrowth-meo-restaurant.jpg"
+                alt="レストランイメージ"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
