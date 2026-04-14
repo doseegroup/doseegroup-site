@@ -27,15 +27,15 @@ export default async function GlobalGrowthPage({
         <section className="relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-5 md:p-12">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
-              <p className="text-xs font-semibold tracking-widest text-stone-500 uppercase">
+              <p className="text-sm font-semibold tracking-widest text-stone-500 uppercase">
                 {lp.hero.eyebrow}
               </p>
 
-              <h1 className="mt-3 text-base text-stone-900 leading-relaxed whitespace-pre-line font-semibold">
+              <h1 className="mt-3 text-lg sm:text-xl md:text-2xl text-stone-900 leading-relaxed whitespace-pre-line font-semibold">
                 {lp.hero.title}
               </h1>
 
-              <p className="mt-4 text-stone-700 leading-relaxed whitespace-pre-line">
+              <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed whitespace-pre-line">
                 {lp.hero.sub}
               </p>
 
