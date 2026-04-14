@@ -1,6 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Noto_Sans_JP } from "next/font/google";
 import { siteConfig } from "@/lib/siteConfig";
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -37,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body className="bg-stone-50 text-stone-900 antialiased">{children}</body>
+    <html lang="ja" className={notoSansJP.variable}>
+      <body className="bg-stone-50 text-stone-900 antialiased font-[family-name:var(--font-noto-sans-jp)]">{children}</body>
     </html>
   );
 }

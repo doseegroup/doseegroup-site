@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  }
+}
+
 .particles-canvas {
   position: fixed;
   inset: 0;

@@ -126,6 +126,9 @@ export default async function GlobalGrowthMeoPage({
                 90%
               </p>
               <p className="mt-4 text-stone-700 font-medium">のユーザーが口コミで来店を決定</p>
+              <p className="mt-4 text-xs text-stone-400">
+                *（出典：BrightLocal「Local Consumer Review Survey」）
+              </p>
             </div>
 
             {/* Right: 説明 */}
