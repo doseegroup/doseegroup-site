@@ -217,6 +217,28 @@ export default async function GlobalGrowthPage({
               {`「見つかる」だけでなく「比較されて選ばれる」状態を構築し、\n検索から来店までの転換率を高めます。`}
             </p>
           </div>
+
+          {/* CTA → MEO 詳細ページへ */}
+          <Link
+            href={`/${locale}/business/globalgrowth/meo`}
+            className="group mt-6 md:mt-8 inline-flex items-center gap-2 text-sm font-semibold text-stone-900 transition-all duration-300 hover:text-stone-950 hover:-translate-y-1 hover:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 rounded-sm"
+          >
+            詳しく見る
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
         </section>
 
         {/* Consult CTA */}
