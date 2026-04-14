@@ -31,7 +31,7 @@ export default async function GlobalGrowthPage({
                 {lp.hero.eyebrow}
               </p>
 
-              <h1 className="mt-3 text-2xl sm:text-3xl md:text-5xl font-semibold text-stone-900 leading-tight">
+              <h1 className="mt-3 text-base text-stone-900 leading-relaxed whitespace-pre-line font-semibold">
                 {lp.hero.title}
               </h1>
 
@@ -88,16 +88,10 @@ export default async function GlobalGrowthPage({
                 className="object-contain"
               />
             </div>
-            {/* 右側：3ブロック・中央揃え */}
-            <div className="text-center space-y-6 md:space-y-8">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
-                {lp.intro.lead}
-              </p>
+            {/* 右側：テキスト */}
+            <div>
               <p className="text-sm sm:text-base md:text-lg text-stone-700 leading-relaxed whitespace-pre-line">
                 {lp.intro.body}
-              </p>
-              <p className="text-lg sm:text-xl md:text-2xl font-bold text-stone-900 leading-snug whitespace-pre-line">
-                {lp.intro.closing}
               </p>
             </div>
           </div>
@@ -120,7 +114,7 @@ export default async function GlobalGrowthPage({
 
         {/* ─── Slide 3: Inbound SNS ─── */}
         <section className="mt-12 md:mt-16 py-6 md:py-10">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-stone-900 leading-tight tracking-tight whitespace-pre-line">
             {lp.mission.title}
           </h2>
           <p className="mt-6 md:mt-10 text-base sm:text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
