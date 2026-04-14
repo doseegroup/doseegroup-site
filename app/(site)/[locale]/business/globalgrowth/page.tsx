@@ -174,13 +174,13 @@ export default async function GlobalGrowthPage({
           {/* テキストセクション */}
           <div className="mt-8 md:mt-12 space-y-8 md:space-y-10">
             <p className="text-base sm:text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
-              訪日外国人の検索行動に特化したSEO対策を提供します。
+              {`訪日外国人の検索行動に特化したSEO対策に加え、\n日本人集客も含めた"二軸での集客設計"を行っています。\n日本人と外国人では検索キーワードや来店までの意思決定プロセスが異なるため、\nそれぞれの検索意図に基づいた最適化を行い、取りこぼしのない集客導線を構築します。`}
             </p>
             <p className="text-base sm:text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
-              {`海外ユーザーの検索意図をベースに、\n多言語キーワード設計・コンテンツ構築・内部SEOを最適化。`}
+              {`海外ユーザーの検索意図をベースに、多言語キーワード設計・コンテンツ構築・内部SEOを最適化。\n単なるアクセス数の増加ではなく、「来店・予約につながる検索流入」を獲得するための設計を行います。`}
             </p>
             <p className="text-base sm:text-lg md:text-xl text-stone-800 leading-loose whitespace-pre-line transition-all duration-300 hover:-translate-y-1 hover:text-stone-950 hover:font-medium">
-              {`単なるアクセス増加ではなく、\n「来店・予約につながる検索流入」を獲得するための設計を行います。`}
+              {`さらに、Googleマップ上での露出最大化、英語対応、レビュー設計、写真最適化までを一体で実行。\n「見つかる」だけで終わらせず、「比較されて選ばれる」状態を構築し、検索から来店までの転換率を高めます。\nインバウンド需要と国内需要の両方を取り切ることで、売上の最大化を実現します。`}
             </p>
           </div>
         </section>
