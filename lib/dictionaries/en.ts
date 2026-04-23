@@ -114,7 +114,7 @@ export const en = {
     title: "Company Information",
     items: [
       { label: "Company Name", value: "DoSee Group Inc." },
-      { label: "Established", value: "Early March 2026 (registration in progress)" },
+      { label: "Established", value: "March 30, 2026" },
       { label: "Representative Director", value: "Yuto Wakasugi" },
       { label: "Capital", value: "JPY 1,500,000" },
       {

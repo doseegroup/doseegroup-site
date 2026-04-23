@@ -112,7 +112,7 @@ export const ja = {
     items: [
       { label: "会社名", value: "株式会社DoSee Group" },
       { label: "英文社名", value: "DoSee Group Inc." },
-      { label: "設立", value: "2026年3月上旬（登記準備中）" },
+      { label: "設立", value: "2026年3月30日" },
       { label: "代表取締役", value: "若杉 悠斗" },
       { label: "資本金", value: "1,500,000円" },
       {
