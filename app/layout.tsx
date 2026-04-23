@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { siteConfig } from "@/lib/siteConfig";
 
 const notoSansJP = Noto_Sans_JP({
@@ -47,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={notoSansJP.variable}>
       <body className="bg-stone-50 text-stone-900 antialiased font-[family-name:var(--font-noto-sans-jp)]">{children}</body>
+      <GoogleAnalytics gaId="G-N5T1X6X9W5" />
     </html>
   );
 }
