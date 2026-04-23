@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { isLocale, type Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/getDictionary";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { siteConfig } from "@/lib/siteConfig";
 
 export default async function GlobalGrowthAboutPage({
   params,
@@ -11,34 +11,29 @@ export default async function GlobalGrowthAboutPage({
 }) {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
+  const dict = getDictionary(locale);
+  const d = dict.business.globalGrowthAbout;
   const consultPath = `/${locale}/business/globalgrowth/consult`;
 
   return (
     <div className="py-10 md:py-20">
       <Container>
 
-        {/* ─── Slide 1: 市場の課題 ─── */}
+        {/* ─── Slide 1 ─── */}
         <section>
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            市場の課題：インバウンドの「機会損失」
+            {d.s1.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
-            {/* Left */}
             <div>
-              <p className="text-lg md:text-xl font-bold text-teal-500">
-                外国人が「不安」で離脱している
-              </p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">{d.s1.leadTitle}</p>
               <div className="mt-4 rounded-xl border border-stone-300 bg-stone-50 px-4 py-3 md:px-5 md:py-4 text-stone-700 leading-relaxed text-sm">
-                観光客は雰囲気だけで店を選びません。具体的情報が欠けていると、たとえ興味を持たれても最後の一歩で離脱します。
+                {d.s1.leadDesc}
               </div>
               <ul className="mt-6 space-y-4">
-                {[
-                  "Instagramが日本語中心",
-                  "予約方法が不明",
-                  "入店ルールがわからない",
-                ].map((item) => (
+                {d.s1.issues.map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-500 text-white text-xs font-bold">
                       ✕
@@ -49,11 +44,10 @@ export default async function GlobalGrowthAboutPage({
               </ul>
             </div>
 
-            {/* Right: image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-1.png"
-                alt="外国人観光客が飲食店を楽しむ様子"
+                alt={d.s1.imgAlt}
                 fill
                 className="object-cover"
               />
@@ -61,96 +55,73 @@ export default async function GlobalGrowthAboutPage({
           </div>
         </section>
 
-        {/* ─── Slide 2: 店選びの現実 ─── */}
+        {/* ─── Slide 2 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            店選びの現実：必要なのは「納得」
+            {d.s2.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
-            {/* Left: Check */}
             <div className="text-center">
               <p className="text-5xl sm:text-7xl md:text-9xl font-extrabold text-orange-500 leading-none">
                 Check
               </p>
-              <p className="mt-4 text-stone-600">情報の充実度が来店を左右する</p>
+              <p className="mt-4 text-stone-600">{d.s2.checkSub}</p>
             </div>
 
-            {/* Right: 検索行動 */}
             <div>
-              <p className="text-lg md:text-xl font-bold text-teal-500">検索行動の黄金ルート</p>
-              <p className="mt-1 font-semibold text-orange-500">
-                Google Maps → Instagram
-              </p>
-              <p className="mt-4 text-stone-700 leading-relaxed">
-                事前に「何の料理か」「価格」「予約可否」「アレルギー対応」をスマホで徹底的に確認する。
-              </p>
-              <p className="mt-3 text-stone-800 font-medium">
-                この情報の有無が勝負の分かれ目です。
-              </p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">{d.s2.searchTitle}</p>
+              <p className="mt-1 font-semibold text-orange-500">Google Maps → Instagram</p>
+              <p className="mt-4 text-stone-700 leading-relaxed">{d.s2.searchDesc}</p>
+              <p className="mt-3 text-stone-800 font-medium">{d.s2.searchNote}</p>
             </div>
           </div>
         </section>
 
-        {/* ─── Slide 3: 2つの欠落 ─── */}
+        {/* ─── Slide 3 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            飲食店が抱える「2つの欠落」
+            {d.s3.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-6 md:grid-cols-2">
-            {/* 1. 説明の欠落 */}
             <div>
               <div className="rounded-2xl border border-stone-200 bg-white p-5 md:p-7">
-                <p className="text-lg font-bold text-teal-500">1. 説明の欠落</p>
-                <p className="mt-3 text-stone-700 leading-relaxed">
-                  味は良いのに「何の店か」を英語で説明できていない。初見の外国人が安心して入れる設計がない。
-                </p>
+                <p className="text-lg font-bold text-teal-500">{d.s3.gap1Title}</p>
+                <p className="mt-3 text-stone-700 leading-relaxed">{d.s3.gap1Desc}</p>
               </div>
               <div className="mt-4 rounded-xl border-2 border-red-300 bg-red-50 px-5 py-3 text-center">
-                <p className="font-bold text-red-600">外国人が「不安」で離脱する</p>
+                <p className="font-bold text-red-600">{d.s3.gap1Result}</p>
               </div>
             </div>
 
-            {/* 2. リソースの欠落 */}
             <div>
               <div className="rounded-2xl border border-stone-200 bg-white p-5 md:p-7">
-                <p className="text-lg font-bold text-teal-500">2. リソースの欠落</p>
-                <p className="mt-3 text-stone-700 leading-relaxed">
-                  忙しくてSNS更新が続かない。英語対応できるスタッフがいない、撮影する余裕もない。
-                </p>
+                <p className="text-lg font-bold text-teal-500">{d.s3.gap2Title}</p>
+                <p className="mt-3 text-stone-700 leading-relaxed">{d.s3.gap2Desc}</p>
               </div>
               <div className="mt-4 rounded-xl border-2 border-orange-300 bg-orange-50 px-5 py-3 text-center">
-                <p className="font-bold text-orange-700">
-                  撮影なしでも回る"継続運用"を、外国人視点で設計できる代行が必要
-                </p>
+                <p className="font-bold text-orange-700">{d.s3.gap2Result}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ─── Slide 4: 解決策 ─── */}
+        {/* ─── Slide 4 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            解決策：インバウンド特化SNS運用
+            {d.s4.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-start">
-            {/* Left */}
             <div>
-              <p className="text-lg md:text-xl font-bold text-teal-500">SNSは「入口」から「導線」へ</p>
-              <p className="mt-3 text-stone-700 leading-relaxed">
-                単なる投稿制作ではなく、プロフィール・ハイライト・DM対応まで一貫して設計。「行動しやすい状態」を維持します。
-              </p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">{d.s4.leadTitle}</p>
+              <p className="mt-3 text-stone-700 leading-relaxed">{d.s4.leadDesc}</p>
               <ul className="mt-6 space-y-3">
-                {[
-                  "英語プロフィール＆ハイライト整備",
-                  "日英キャプション作成",
-                  "予約導線/DMテンプレ設計",
-                ].map((item) => (
+                {d.s4.bullets.map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <span className="text-teal-500 font-bold">✓</span>
                     <span className="text-stone-800">{item}</span>
@@ -159,11 +130,10 @@ export default async function GlobalGrowthAboutPage({
               </ul>
             </div>
 
-            {/* Right: image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-2.png"
-                alt="インバウンド向けSNS運用画面"
+                alt={d.s4.imgAlt}
                 fill
                 className="object-cover"
               />
@@ -171,31 +141,15 @@ export default async function GlobalGrowthAboutPage({
           </div>
         </section>
 
-        {/* ─── Slide 5: 3つの柱 ─── */}
+        {/* ─── Slide 5 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            成果を支える3つの柱
+            {d.s5.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {[
-              {
-                icon: "🚪",
-                title: "入口の整備",
-                body: "ハイライト等でMenu / How to / Accessを瞬時に理解させる。",
-              },
-              {
-                icon: "🛡️",
-                title: "不安の解消",
-                body: "価格帯、アレルギー、入店ルールを明示し、心理的ハードルを下げる。",
-              },
-              {
-                icon: "🗺️",
-                title: "行動導線",
-                body: "SNSからGoogle Mapsや予約サイトへ迷わず誘導する。",
-              },
-            ].map((col) => (
+            {d.s5.pillars.map((col) => (
               <div
                 key={col.title}
                 className="rounded-3xl border border-stone-200 bg-white p-6 md:p-8 text-center"
@@ -208,30 +162,24 @@ export default async function GlobalGrowthAboutPage({
           </div>
         </section>
 
-        {/* ─── Slide 6: 撮影なし運用モデル ─── */}
+        {/* ─── Slide 6 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            「撮影なし」運用モデル
+            {d.s6.title}
           </h2>
 
           <div className="mt-8 md:mt-12 grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
-            {/* Left */}
             <div>
-              <p className="text-lg md:text-xl font-bold text-teal-500">素材を活かし、効率を最大化</p>
-              <p className="mt-4 text-stone-700 leading-relaxed">
-                店舗が保有する既存の写真・動画を活用し、クリエイティブを量産します。
-              </p>
-              <p className="mt-3 text-stone-700 leading-relaxed">
-                撮影コストを削ることで、低価格かつ継続可能なストック型運用を実現しました。
-              </p>
+              <p className="text-lg md:text-xl font-bold text-teal-500">{d.s6.leadTitle}</p>
+              <p className="mt-4 text-stone-700 leading-relaxed">{d.s6.body1}</p>
+              <p className="mt-3 text-stone-700 leading-relaxed">{d.s6.body2}</p>
             </div>
 
-            {/* Right: image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100">
               <Image
                 src="/images/business/globalgrowth-about-3.png"
-                alt="スマホで料理写真を撮影する様子"
+                alt={d.s6.imgAlt}
                 fill
                 className="object-cover"
               />
@@ -239,36 +187,15 @@ export default async function GlobalGrowthAboutPage({
           </div>
         </section>
 
-        {/* ─── Slide 7: 運用のスタンス ─── */}
+        {/* ─── Slide 7 ─── */}
         <section className="mt-16 md:mt-24">
           <h2 className="flex items-center gap-3 text-xl sm:text-2xl md:text-4xl font-bold text-stone-900">
             <span className="w-1.5 h-7 md:h-8 rounded-full bg-orange-500 shrink-0" />
-            運用のスタンス：現場に効く改善
+            {d.s7.title}
           </h2>
 
           <div className="mt-8 md:mt-12 space-y-5 md:space-y-6">
-            {[
-              {
-                icon: "⚡",
-                label: "正解を待たずに即実装",
-                body: "まず動かし、変化を見て改善する。",
-              },
-              {
-                icon: "🔍",
-                label: "反応を可視化",
-                body: "保存数、DM数、来店の声から手応えを探る。",
-              },
-              {
-                icon: "🔄",
-                label: "継続的な導線強化",
-                body: "見せ方や誘導リンクを月単位でブラッシュアップ。",
-              },
-              {
-                icon: "✓",
-                label: "海外飲食の実務知見",
-                body: "20年以上の海外経験・飲食店運営経験者がAI出力を精査。",
-              },
-            ].map((item) => (
+            {d.s7.items.map((item) => (
               <div key={item.label} className="flex items-start gap-3 md:gap-4">
                 <span className="text-xl md:text-2xl shrink-0 w-8 text-center">{item.icon}</span>
                 <div>
@@ -283,21 +210,12 @@ export default async function GlobalGrowthAboutPage({
         {/* ─── CTA ─── */}
         <section className="mt-16 md:mt-24">
           <div className="rounded-3xl bg-stone-900 p-7 sm:p-10 md:p-14 text-white text-center">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
-              インバウンド集客を、仕組みでつくる。
-            </h2>
-            <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">
-              まずは30分の無料相談で、現状の整理と方向性の確認だけ行います。
-            </p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{d.cta.title}</h2>
+            <p className="mt-4 text-white/70 leading-relaxed text-sm md:text-base">{d.cta.lead}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href={consultPath} variant="solid">
-                無料相談を予約する
-              </Button>
-              <Button
-                href={`/${locale}/business/globalgrowth/service`}
-                variant="outline"
-              >
-                料金・プランを見る
+              <Button href={consultPath} variant="solid">{d.cta.ctaPrimary}</Button>
+              <Button href={`/${locale}/business/globalgrowth/service`} variant="outline">
+                {d.cta.ctaSecondary}
               </Button>
             </div>
           </div>
