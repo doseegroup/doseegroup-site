@@ -395,11 +395,15 @@ export const ja = {
     body:
       "DoSee Groupへのお問い合わせは、以下のフォームよりご連絡ください。\n事業に関するご相談、取材・協業のご提案なども歓迎しています。",
     form: {
-      name: "Name",
-      email: "Email",
-      subject: "Subject",
-      message: "Message",
-      submit: "Send",
+      name: "お名前",
+      email: "メールアドレス",
+      subject: "件名",
+      message: "メッセージ",
+      submit: "送信する",
+      sending: "送信中...",
+      successTitle: "送信完了",
+      successBody: "お問い合わせいただきありがとうございます。内容を確認後、担当者よりご連絡いたします。",
+      errorPrefix: "エラー：",
     },
   },
   philosophy: {

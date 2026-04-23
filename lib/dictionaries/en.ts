@@ -402,6 +402,10 @@ export const en = {
       subject: "Subject",
       message: "Message",
       submit: "Send",
+      sending: "Sending...",
+      successTitle: "Message sent",
+      successBody: "Thank you for reaching out. We will get back to you shortly.",
+      errorPrefix: "Error: ",
     },
   },
   philosophy: {
