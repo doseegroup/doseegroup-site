@@ -1,8 +1,37 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/getDictionary";
+import { siteConfig } from "@/lib/siteConfig";
+import { pageMeta } from "@/lib/pageMeta";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: rawLocale } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "ja";
+  const meta = pageMeta.globalGrowthAbout[locale];
+  const path = `/${locale}/business/globalgrowth/about`;
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: {
+      canonical: `${siteConfig.url}${path}`,
+      languages: { ja: `${siteConfig.url}/ja/business/globalgrowth/about`, en: `${siteConfig.url}/en/business/globalgrowth/about` },
+    },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `${siteConfig.url}${path}`,
+      locale: locale === "ja" ? "ja_JP" : "en_US",
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+    },
+  };
+}
 
 export default async function GlobalGrowthAboutPage({
   params,

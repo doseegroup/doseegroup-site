@@ -7,6 +7,8 @@ const pages = [
   "/business",
   "/business/wellness",
   "/business/globalgrowth",
+  "/business/globalgrowth/about",
+  "/business/globalgrowth/meo",
   "/business/globalgrowth/consult",
   "/business/globalgrowth/service",
   "/company",
