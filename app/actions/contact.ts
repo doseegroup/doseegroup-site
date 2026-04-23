@@ -29,7 +29,7 @@ export async function submitContact(
 
   try {
     await resend.emails.send({
-      from: "DoSee Group <noreply@doseegroup.com>",
+      from: "DoSee Group <noreply@send.doseegroup.com>",
       to: "info@doseegroup.com",
       replyTo: email,
       subject: subject ? `[お問い合わせ] ${subject}` : `[お問い合わせ] ${name} 様より`,
