@@ -333,22 +333,6 @@ export const en = {
       ],
       featureSections: [
         {
-          title: "DM Handling",
-          description: "Eliminate pre-visit uncertainty. Operate DMs as hospitality.",
-          rows: [
-            { label: "English DMs", basic: "Templates only", standard: "Natural language", premium: "Natural + priority" },
-            { label: "Basic info coverage", basic: "Hours / access / reservations / price range / seating", standard: "Basic + expanded", premium: "Standard + advanced" },
-            { label: "Pre-visit guidance", basic: "—", standard: "◯ (funnel-building)", premium: "◯ (priority)" },
-            { label: "Tourist guidance (payment/etiquette)", basic: "—", standard: "◯", premium: "◯" },
-            { label: "Group / private event info", basic: "—", standard: "◯ (conditions-based)", premium: "◯" },
-            { label: "FAQ template responses", basic: "◯", standard: "◯", premium: "◯ (with improvement suggestions)" },
-            { label: "Dietary / religious detail explanations", basic: "—", standard: "—", premium: "◯" },
-            { label: "Dietary complaint first response", basic: "—", standard: "—", premium: "◯ (triage only)" },
-            { label: "Flexible peak-period handling", basic: "—", standard: "—", premium: "◯ (capped)" },
-            { label: "DM analysis & improvement proposals", basic: "—", standard: "—", premium: "◯ (trend analysis)" },
-          ],
-        },
-        {
           title: "Feed Posts",
           description: "Less about volume, more about pathways. Designed to drive visits and bookings.",
           rows: [

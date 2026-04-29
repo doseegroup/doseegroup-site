@@ -330,22 +330,6 @@ export const ja = {
       ],
       featureSections: [
         {
-          title: "DM対応",
-          description: "来店前の不安を潰す。DMを\u201C接客\u201Dとして運用します。",
-          rows: [
-            { label: "英語DM", basic: "定型文のみ", standard: "自然文対応", premium: "自然文＋優先対応" },
-            { label: "基本案内（範囲）", basic: "営業時間/アクセス/予約方法案内/価格帯/TA/店内", standard: "Basic＋拡張", premium: "Standard＋高度対応" },
-            { label: "予約前の案内・誘導", basic: "—", standard: "◯（導線を作る）", premium: "◯（優先）" },
-            { label: "観光客向け案内（決済/マナー）", basic: "—", standard: "◯", premium: "◯" },
-            { label: "団体・貸切の条件案内", basic: "—", standard: "◯（条件がある場合）", premium: "◯" },
-            { label: "FAQテンプレ対応", basic: "◯", standard: "◯", premium: "◯（改善提案あり）" },
-            { label: "食事制限・宗教配慮（詳細説明）", basic: "—", standard: "—", premium: "◯" },
-            { label: "食事制限関連クレーム一次受付", basic: "—", standard: "—", premium: "◯（切り分けのみ）" },
-            { label: "繁忙期の柔軟対応", basic: "—", standard: "—", premium: "◯（上限あり）" },
-            { label: "DM分析・改善提案", basic: "—", standard: "—", premium: "◯（傾向分析）" },
-          ],
-        },
-        {
           title: "Feed投稿",
           description: "投稿の量より\u201C導線\u201D。来店・予約につながる設計にします。",
           rows: [
