@@ -334,7 +334,7 @@ export const ja = {
           description: "投稿の量より\u201C導線\u201D。来店・予約につながる設計にします。",
           rows: [
             { label: "フィード投稿数", basic: "月8（週2）", standard: "月12（週3）", premium: "月16（週4）" },
-            { label: "リール（上限）", basic: "月2（簡易）", standard: "月4", premium: "月5" },
+            { label: "リール（上限）", basic: "月2", standard: "月2", premium: "月3" },
             { label: "ストーリー頻度", basic: "週3（テンプレ運用）", standard: "週5（導線設計）", premium: "毎日（イベント対応含む）" },
             { label: "日英キャプション", basic: "英語は短い定型（誤解しない）", standard: "読まれる形に最適化", premium: "最適化＋表記ルール管理" },
             { label: "月次レポート", basic: "月1（反応＋次月改善）", standard: "月1（改善前提）", premium: "月1（深め）" },

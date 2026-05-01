@@ -337,7 +337,7 @@ export const en = {
           description: "Less about volume, more about pathways. Designed to drive visits and bookings.",
           rows: [
             { label: "Feed posts", basic: "8/mo (2x/week)", standard: "12/mo (3x/week)", premium: "16/mo (4x/week)" },
-            { label: "Reels (cap)", basic: "2/mo (simple)", standard: "4/mo", premium: "5/mo" },
+            { label: "Reels (cap)", basic: "2/mo", standard: "2/mo", premium: "3/mo" },
             { label: "Stories frequency", basic: "3x/week (templates)", standard: "5x/week (funnel-focused)", premium: "Daily (incl. events)" },
             { label: "JP/EN captions", basic: "Short English templates (no misunderstandings)", standard: "Optimized for readability", premium: "Optimized + style guide management" },
             { label: "Monthly report", basic: "1/mo (engagement + next steps)", standard: "1/mo (improvement-focused)", premium: "1/mo (in-depth)" },
