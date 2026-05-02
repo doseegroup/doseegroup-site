@@ -8,8 +8,6 @@ DoSee Group Inc. was officially established on March 30, 2026.
 
 ## Company Overview
 
-| Item | Details |
-|------|---------|
 | Company Name | DoSee Group Inc. |
 | Established | March 30, 2026 |
 | Representative Director | Yuto Wakasugi |
@@ -22,8 +20,6 @@ Under the philosophy of "Do it first. See the results.", DoSee Group operates th
 **DoSee Global Growth**
 An inbound marketing agency specializing in SNS management and MEO strategy for restaurants in Japan. We help venues maximize customer acquisition from both international and domestic guests.
 
-**DoSee Wellness**
-A wellness brand inspired by Japanese tea culture, designed to bring sustainable wellness experiences into everyday life.
 
 ## A Message from the Founder
 
