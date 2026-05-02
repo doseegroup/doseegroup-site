@@ -1,6 +1,6 @@
 ---
 title: How to Choose an SNS Management Agency for Restaurants | 5 Key Checkpoints
-date: 2026-05-02
+date: 2026-05-19
 description: A practical guide for restaurants choosing an SNS management agency. Learn the five checkpoints that matter — inbound experience, no-shooting options, English support, pricing, and reporting.
 ---
 

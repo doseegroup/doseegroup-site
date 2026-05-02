@@ -1,6 +1,6 @@
 ---
 title: How Restaurants Can Use Google Maps (MEO) to Attract International Visitors
-date: 2026-05-02
+date: 2026-05-12
 description: A practical guide for restaurants on using Google Maps (MEO) to attract inbound visitors. Covers basic setup, English optimization, photos, and review responses — everything needed to turn map searches into actual visits.
 ---
 
