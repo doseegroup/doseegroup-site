@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/siteConfig";
+import { getAllNewsPosts } from "@/lib/news";
 
 const pages = [
   "",
@@ -21,10 +22,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ["ja", "en"] as const;
   const now = new Date();
 
-  return locales.flatMap((locale) =>
+  const staticPages = locales.flatMap((locale) =>
     pages.map((page) => ({
       url: `${baseUrl}/${locale}${page}`,
       lastModified: now,
     }))
   );
+
+  const newsPages = locales.flatMap((locale) =>
+    getAllNewsPosts(locale).map((post) => ({
+      url: `${baseUrl}/${locale}/news/${post.slug}`,
+      lastModified: new Date(post.date),
+    }))
+  );
+
+  return [...staticPages, ...newsPages];
 }
