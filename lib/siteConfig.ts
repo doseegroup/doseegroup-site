@@ -17,4 +17,9 @@ export const siteConfig = {
     wellness: "https://www.instagram.com/wellchamatcha",
     globalGrowth: "https://www.instagram.com/tokyofood.guide",
   },
+
+  // Social — TikTok（DoSee Global Growth のみ）
+  tiktok: {
+    globalGrowth: "https://www.tiktok.com/@tokyo.foodie",
+  },
 } as const;
