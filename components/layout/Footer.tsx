@@ -11,12 +11,12 @@ export default function Footer({ locale }: { locale: Locale }) {
             © {new Date().getFullYear()} {siteConfig.legalName}
           </div>
 
-          <div className="flex items-center gap-5 text-sm text-stone-700">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-stone-700">
             <Link className="hover:text-stone-900" href={`/${locale}/company`}>
-              {locale === "ja" ? "Company" : "Company"}
+              Company
             </Link>
             <Link className="hover:text-stone-900" href={`/${locale}/contact`}>
-              {locale === "ja" ? "Contact" : "Contact"}
+              Contact
             </Link>
             <a
               className="hover:text-stone-900"
@@ -25,6 +25,22 @@ export default function Footer({ locale }: { locale: Locale }) {
               rel="noreferrer"
             >
               DoSee Wellness
+            </a>
+            <a
+              className="hover:text-stone-900"
+              href={siteConfig.instagram.wellness}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram（DoSee Wellness）
+            </a>
+            <a
+              className="hover:text-stone-900"
+              href={siteConfig.instagram.globalGrowth}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram（DoSee Global Growth）
             </a>
           </div>
         </div>

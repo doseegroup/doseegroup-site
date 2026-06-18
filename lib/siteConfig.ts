@@ -11,4 +11,10 @@ export const siteConfig = {
 
   // Global Growth / Free Consultation
   consultationUrl: "https://calendar.app.google/jcYFzrFBsHyCKLh6A",
+
+  // Social — Instagram accounts per brand
+  instagram: {
+    wellness: "https://www.instagram.com/wellchamatcha",
+    globalGrowth: "https://www.instagram.com/tokyofood.guide",
+  },
 } as const;
