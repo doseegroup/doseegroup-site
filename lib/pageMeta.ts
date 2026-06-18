@@ -114,12 +114,12 @@ export const pageMeta = {
     ja: {
       title: "会社情報 | DoSee Group",
       description:
-        "株式会社DoSee Group（東京都渋谷区）の会社概要。代表取締役：若杉悠斗。2026年3月30日設立。インバウンド集客・ウェルネス事業を展開。",
+        "株式会社DoSee Group（東京都渋谷区）の会社概要。代表取締役：若杉悠斗。2026年4月22日設立。インバウンド集客・ウェルネス事業を展開。",
     },
     en: {
       title: "Company Information | DoSee Group",
       description:
-        "DoSee Group Inc. (Shibuya, Tokyo). Representative Director: Yuto Wakasugi. Established March 30, 2026. Inbound marketing and wellness businesses.",
+        "DoSee Group Inc. (Shibuya, Tokyo). Representative Director: Yuto Wakasugi. Established April 22, 2026. Inbound marketing and wellness businesses.",
     },
   },
   contact: {

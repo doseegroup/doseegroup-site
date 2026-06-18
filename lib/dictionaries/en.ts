@@ -38,6 +38,38 @@ export const en = {
       "A wellness brand inspired by Japanese tea culture, designed to fit naturally into daily life.",
     wellnessCta: "Visit Brand Site",
 
+    wellnessPage: {
+      heroTagline: "Tune each day with ease, through the gentleness of Japanese tea.",
+      intro:
+        "DoSee Wellness is a brand that builds wellness products inspired by Japanese tea.\n\nDesigned to be easy to continue in busy everyday life—creating space not only for the body, but also for the mind.\nFrom ingredients to design and experience, we value Japanese aesthetics.",
+      valuesTitle: "A little space to reset, every day.",
+      valuesLead:
+        "No strict rules, no habits to force. Just one small pause in your day, quietly and surely settling your mind, body, and skin.",
+      values: [
+        { name: "Mind", body: "Easing the tension of thought, finding natural focus within the stillness." },
+        { name: "Body", body: "Like a deep breath, gently tuning your body's rhythm." },
+        { name: "Skin", body: "Filled with moisture, skin returns to its natural softness." },
+      ],
+      productsTitle: "WellCha",
+      productsLead:
+        "The natural energy of matcha and hojicha brings calm and focus to busy days. In an easy-to-keep latte style, care for mind and body in a single cup.",
+      products: [
+        {
+          name: "Matcha Latte",
+          copy: "Calm focus and drinkable skincare, in a single cup.",
+          slug: "matcha-latte",
+          img: "/images/wellness/matcha-latte.jpg",
+        },
+        {
+          name: "Hojicha Latte",
+          copy: "A new hojicha habit that loosens mind, body, and breath.",
+          slug: "hojicha-latte",
+          img: "/images/wellness/hojicha-latte.jpg",
+        },
+      ],
+      productCta: "View product",
+    },
+
    globalGrowthTitle: "DoSee Global Growth",
     globalGrowthDesc:
       "A team that designs and operates social media to drive real-world visits from international audiences.",
@@ -361,7 +393,7 @@ export const en = {
     title: "Company Information",
     items: [
       { label: "Company Name", value: "DoSee Group Inc." },
-      { label: "Established", value: "March 30, 2026" },
+      { label: "Established", value: "April 22, 2026" },
       { label: "Representative Director", value: "Yuto Wakasugi" },
       { label: "Capital", value: "JPY 1,500,000" },
       {

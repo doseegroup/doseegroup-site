@@ -38,6 +38,38 @@ export const ja = {
       "日本茶・抹茶を起点に、日常に続くウェルネス体験を提案するブランドです。",
     wellnessCta: "Visit Brand Site",
 
+    wellnessPage: {
+      heroTagline: "日本茶のやさしさで、毎日をしなやかに整える。",
+      intro:
+        "DoSee Wellnessは、日本茶を中心としたウェルネスプロダクトを展開するブランドです。\n\n忙しい日常の中でも無理なく続けられること。身体だけでなく、心にも余白を生むこと。\n素材選びからデザイン、体験設計に至るまで、日本的な美意識を大切にしています。",
+      valuesTitle: "整う余白を、日常に。",
+      valuesLead:
+        "無理なルールも、頑張る習慣もいらない。日常の中の、ほんのひとつの余白が、心・からだ・肌を、静かに、確かに、整えていきます。",
+      values: [
+        { name: "Mind", body: "思考の緊張をほどき、静けさの中で、自然な集中へ。" },
+        { name: "Body", body: "深い呼吸のように、からだのリズムを、やさしく整える。" },
+        { name: "Skin", body: "うるおいが満ちて、素肌が本来のやわらかさへ。" },
+      ],
+      productsTitle: "WellCha",
+      productsLead:
+        "抹茶とほうじ茶の自然なエネルギーで、忙しい日々に落ち着きと集中を。続けやすいラテスタイルで、こころ・からだのケアを一杯に。",
+      products: [
+        {
+          name: "Matcha Latte",
+          copy: "落ち着いた集中と、飲むスキンケアを一杯に。",
+          slug: "matcha-latte",
+          img: "/images/wellness/matcha-latte.jpg",
+        },
+        {
+          name: "Hojicha Latte",
+          copy: "心・からだ・呼吸をほどく、新しいほうじ茶習慣。",
+          slug: "hojicha-latte",
+          img: "/images/wellness/hojicha-latte.jpg",
+        },
+      ],
+      productCta: "商品を見る",
+    },
+
     globalGrowthTitle: "DoSee Global Growth",
     globalGrowthDesc: "海外観光客向けに、来店につながるSNSを設計・運用する事業です。",
     globalGrowthBody:
@@ -359,7 +391,7 @@ export const ja = {
     items: [
       { label: "会社名", value: "株式会社DoSee Group" },
       { label: "英文社名", value: "DoSee Group Inc." },
-      { label: "設立", value: "2026年3月30日" },
+      { label: "設立", value: "2026年4月22日" },
       { label: "代表取締役", value: "若杉 悠斗" },
       { label: "資本金", value: "1,500,000円" },
       {

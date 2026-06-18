@@ -99,12 +99,6 @@ export default function HomeBusiness({ locale }: { locale: Locale }) {
 
               {/* Coming Soon */}
               <div className="group relative overflow-hidden rounded-3xl border border-dashed border-stone-300 bg-stone-50">
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-50"
-                  style={{ backgroundImage: "url('/images/bg/comingsoon-bg.jpg')" }}
-                />
-                <div className="absolute inset-0 bg-white/70" />
-
                 <div className="relative p-8">
                   <span className="inline-flex items-center rounded-full bg-stone-900/5 px-3 py-1 text-xs font-semibold text-stone-700">
                     Coming Soon
