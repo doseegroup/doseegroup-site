@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/getDictionary";
 import { siteConfig } from "@/lib/siteConfig";
@@ -249,6 +250,29 @@ export default async function GlobalGrowthPlansPage({
               </Button>
             </div>
             <p className="mt-3 text-xs text-stone-500">{d.initialSetupNote}</p>
+          </div>
+        </section>
+
+        {/* 次のステップ（内部導線） */}
+        <section className="mt-12">
+          <p className="text-sm font-semibold text-stone-500">{d.relatedTitle}</p>
+          <div className="mt-4 flex flex-col sm:flex-row gap-4">
+            <Link
+              href={`/${locale}/business/globalgrowth/consult`}
+              className="flex-1 rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-stone-400"
+            >
+              <span className="text-base font-semibold text-stone-900">
+                {d.relatedConsult}
+              </span>
+            </Link>
+            <Link
+              href={`/${locale}/business/globalgrowth`}
+              className="flex-1 rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-stone-400"
+            >
+              <span className="text-base font-semibold text-stone-900">
+                {d.relatedHub}
+              </span>
+            </Link>
           </div>
         </section>
       </Container>

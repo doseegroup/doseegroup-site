@@ -68,6 +68,9 @@ export const en = {
         },
       ],
       productCta: "View product",
+      relatedTitle: "Other DoSee Group businesses",
+      relatedGrowth: "Explore DoSee Global Growth",
+      relatedBusiness: "Back to all businesses",
     },
 
    globalGrowthTitle: "DoSee Global Growth",
@@ -301,6 +304,9 @@ export const en = {
       initialSetupDesc: "Common consultation items are built in as 'initial setup'.\nIndividual adjustments are confirmed and fine-tuned during the free consultation only if needed.",
       initialSetupNote: "※ A Google Meet link is generated automatically / Japanese OK",
       consultCta: "Book a free consult",
+      relatedTitle: "Next step",
+      relatedConsult: "Learn about the free consultation",
+      relatedHub: "Back to service overview",
       plans: [
         {
           key: "basic",

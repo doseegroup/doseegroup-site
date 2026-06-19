@@ -56,6 +56,10 @@ export default async function NewsDetailPage({
   if (!post) notFound();
 
   const backLabel = locale === "ja" ? "← ニュース一覧" : "← News";
+  const relatedLabel = locale === "ja" ? "他のニュース" : "More news";
+  const relatedPosts = getAllNewsPosts(locale)
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
 
   const urlBase = siteConfig.url.replace(/\/$/, "");
   const isJa = locale === "ja";
@@ -142,6 +146,32 @@ export default async function NewsDetailPage({
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
+
+        {relatedPosts.length > 0 && (
+          <div className="mt-16 border-t border-stone-200 pt-10">
+            <h2 className="text-sm font-semibold text-stone-500">{relatedLabel}</h2>
+            <ul className="mt-5 flex flex-col divide-y divide-stone-100">
+              {relatedPosts.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/${locale}/news/${p.slug}`}
+                    className="group flex flex-col gap-1 py-4 transition-colors hover:text-stone-950"
+                  >
+                    <time className="text-xs text-stone-400">
+                      {new Date(p.date).toLocaleDateString(
+                        locale === "ja" ? "ja-JP" : "en-US",
+                        { year: "numeric", month: "long", day: "numeric" }
+                      )}
+                    </time>
+                    <span className="text-base text-stone-800 group-hover:text-stone-950">
+                      {p.title}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Container>
       </section>
     </>

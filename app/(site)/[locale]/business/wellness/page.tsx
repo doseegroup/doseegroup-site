@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/getDictionary";
 import Container from "@/components/ui/Container";
@@ -139,11 +140,36 @@ export default async function WellnessBusinessPage({
       </section>
 
       {/* CTA */}
-      <section className="pb-20">
+      <section className="pb-12">
         <Container>
           <Button href={siteConfig.wellnessUrl} external>
             {dict.business.wellnessCta}
           </Button>
+        </Container>
+      </section>
+
+      {/* 他の事業（内部導線） */}
+      <section className="pb-20">
+        <Container>
+          <p className="text-sm font-semibold text-stone-500">{page.relatedTitle}</p>
+          <div className="mt-4 flex flex-col sm:flex-row gap-4">
+            <Link
+              href={`/${locale}/business/globalgrowth`}
+              className="flex-1 rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-stone-400"
+            >
+              <span className="text-base font-semibold text-stone-900">
+                {page.relatedGrowth}
+              </span>
+            </Link>
+            <Link
+              href={`/${locale}/business`}
+              className="flex-1 rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-stone-400"
+            >
+              <span className="text-base font-semibold text-stone-900">
+                {page.relatedBusiness}
+              </span>
+            </Link>
+          </div>
         </Container>
       </section>
     </>

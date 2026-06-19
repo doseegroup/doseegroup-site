@@ -68,6 +68,9 @@ export const ja = {
         },
       ],
       productCta: "商品を見る",
+      relatedTitle: "DoSee Group の他の事業",
+      relatedGrowth: "DoSee Global Growth を見る",
+      relatedBusiness: "事業一覧に戻る",
     },
 
     globalGrowthTitle: "DoSee Global Growth",
@@ -298,6 +301,9 @@ export const ja = {
       initialSetupDesc: "相談で多い内容を「初期設定」として組み込んでいます。\n個別調整が必要な場合のみ、無料相談で確認・微調整します。",
       initialSetupNote: "※ 自動で Google Meet が発行されます / 日本語OK",
       consultCta: "無料相談を予約する",
+      relatedTitle: "次のステップ",
+      relatedConsult: "無料相談について詳しく",
+      relatedHub: "サービス概要に戻る",
       plans: [
         {
           key: "basic",
