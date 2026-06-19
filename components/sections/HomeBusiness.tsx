@@ -56,7 +56,7 @@ export default function HomeBusiness({ locale }: { locale: Locale }) {
                     <Button href={`/${locale}/business/wellness`} variant="solid">
                       View Details
                     </Button>
-                    <Button href={siteConfig.wellnessUrl} variant="outline" external>
+                    <Button href={siteConfig.wellnessUrl} variant="outlineLight" external>
                       {dict.business.wellnessCta}
                     </Button>
                   </div>
