@@ -16,14 +16,14 @@ export default function HomeGrowth({
       {/*
         ─────────────────────────────────────────
         右半分の背景画像エリア（Desktop）
-        画像ファイルを /public/images/bg/growth-bg.png に配置してください。
+        画像ファイルを /public/images/bg/growth-bg.avif に配置してください。
         bg-contain で画像全体を表示、bg-right-bottom で右下に寄せています。
         ─────────────────────────────────────────
       */}
       {/* 背景画像（全サイズ共通・テキストの後ろに表示） */}
       <div
         className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/bg/growth-bg.png')" }}
+        style={{ backgroundImage: "url('/images/bg/growth-bg.avif')" }}
         aria-hidden="true"
       />
 
