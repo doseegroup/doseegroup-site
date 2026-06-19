@@ -20,6 +20,9 @@ Under the philosophy of "Do it first. See the results.", DoSee Group operates th
 **DoSee Global Growth**
 An inbound marketing agency specializing in SNS management and MEO strategy for restaurants in Japan. We help venues maximize customer acquisition from both international and domestic guests.
 
+**DoSee Wellness**
+A wellness brand rooted in Japanese tea and matcha, offering wellness experiences that fit naturally into everyday life. Centered on WellCha, we deliver a "cup for settling" that anyone can adopt even on the busiest days.
+
 
 ## A Message from the Founder
 
